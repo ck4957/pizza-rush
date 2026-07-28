@@ -5,6 +5,9 @@ Verified 2026-07-28 on iPhone 17 Pro Max simulator, iOS 26.5:
 - Full test suite: 28 passed, 0 failed, 0 skipped
 - Targeted Remove Ads review-screenshot UI test: passed
 - Release simulator build: passed
+- Repository-local Google Ads SDK package graph: resolved and Release build passed
+- Generated warm-kitchen background asset: compiled and visually inspected in the
+  Release simulator app
 - Static analysis: passed
 - Pre-build schema: passed
 - Product acceptance contract: passed
