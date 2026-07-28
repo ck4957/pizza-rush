@@ -215,7 +215,7 @@
 			mainGroup = 500000000000000000000001;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A00000000000000000000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				A00000000000000000000001 /* XCLocalSwiftPackageReference "Packages/GoogleAdsSDK" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 500000000000000000000002 /* Products */;
@@ -607,21 +607,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		A00000000000000000000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 13.7.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		A00000000000000000000001 /* XCLocalSwiftPackageReference "Packages/GoogleAdsSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/GoogleAdsSDK;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		A00000000000000000000002 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A00000000000000000000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			package = A00000000000000000000001 /* XCLocalSwiftPackageReference "Packages/GoogleAdsSDK" */;
 			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
