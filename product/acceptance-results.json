@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "contract": "product/acceptance.json",
+  "evaluatedAt": "2026-07-28T04:28:00Z",
+  "appVersion": "1.0",
+  "buildNumber": "1",
+  "environments": [
+    {
+      "kind": "simulator",
+      "name": "iPhone 17",
+      "os": "iOS 26.1",
+      "evidence": [
+        "product/evidence/runtime/simulator-run.md"
+      ]
+    },
+    {
+      "kind": "simulator",
+      "name": "iPhone 17 Pro Max",
+      "os": "iOS 26.5",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/tests/final-release-build-run.log",
+        "product/evidence/runtime/performance.md",
+        "product/evidence/runtime/screenshot-manifest.json"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "core_pipeline_complete",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/rush-fixture.mp4",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png"
+      ],
+      "notes": "Engine tests and the full UI journey exercise ordered production and invalid-state recovery; the inspected rush fixture shows concurrent station work."
+    },
+    {
+      "id": "pizza_state_machine",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log"
+      ],
+      "notes": "Focused engine tests accept only legal production transitions and require discard for burned work."
+    },
+    {
+      "id": "six_recipes_exact",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "PizzaRush/Domain/GameDomain.swift"
+      ],
+      "notes": "The complete six-recipe catalog and exact ingredient sets are validated deterministically."
+    },
+    {
+      "id": "bake_phase_boundaries",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/screenshots/en-US/iphone-6.9/02-master-the-oven.png"
+      ],
+      "notes": "Exact boundary tests pass and the running UI exposes the perfect state with text, shape, and timing feedback."
+    },
+    {
+      "id": "scoring_invariants",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log"
+      ],
+      "notes": "Base value, quality, patience, combo bands, and perfect bonus are covered at contract edges."
+    },
+    {
+      "id": "combo_reset_rules",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md"
+      ],
+      "notes": "Correct live delivery increments combo; failure, discard, wrong, and expired paths reset it."
+    },
+    {
+      "id": "objectives_stars_unlocks",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/full-success-ui-test.log"
+      ],
+      "notes": "Threshold edges, idempotent completion, one-star unlock, and Level 2 continuation passed."
+    },
+    {
+      "id": "world_one_twenty_levels",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "PizzaRush/Domain/GameDomain.swift",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png"
+      ],
+      "notes": "The safe catalog validates 15 main and five challenge levels, six recipes, four stations, and three objective families."
+    },
+    {
+      "id": "upgrade_throughput_economy",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/screenshots/en-US/iphone-6.9/04-upgrade-your-kitchen.png"
+      ],
+      "notes": "Tier costs and capacities are monotonic, resolved centrally, and displayed from earned currency."
+    },
+    {
+      "id": "fixed_step_determinism",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "PizzaRush/Domain/GameEngine.swift"
+      ],
+      "notes": "The 1/60-second accumulator and injectable clock produce identical snapshots for identical commands."
+    },
+    {
+      "id": "pause_lifecycle_deadline",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md"
+      ],
+      "notes": "Pause tests freeze simulation time, and the runtime path reconciles foreground deadlines without duplicate completion."
+    },
+    {
+      "id": "runtime_full_journey",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/full-success-ui-test.log",
+        "product/evidence/runtime/persistence-relaunch-ui-test.log",
+        "product/evidence/runtime/simulator-run.md"
+      ],
+      "notes": "A clean run completed tutorial, two real pizzas, the timed shift, Level 2 continuation, recoverable failure, reset, and relaunch."
+    },
+    {
+      "id": "runtime_performance",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/runtime/performance.md",
+        "product/evidence/tests/final-release-build-run.log"
+      ],
+      "notes": "Release launch completed in about 1.2 seconds; Apple footprint measured 34.5 MB and a 50.4 MB peak."
+    },
+    {
+      "id": "release_configuration_clean",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/final-release-build-run.log",
+        "product/evidence/runtime/monetization-acceptance.md",
+        "product/evidence/runtime/screenshot-manifest.json"
+      ],
+      "notes": "Release built with zero diagnostics and fails closed without injected production identifiers; inspected imagery contains no test labels."
+    },
+    {
+      "id": "content_validation",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "PizzaRush/Domain/GameDomain.swift"
+      ],
+      "notes": "The validator accepts the complete safe catalog and rejects a missing recipe reference; production retains a playable fallback."
+    },
+    {
+      "id": "persistence_atomic_progress",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/persistence-relaunch-ui-test.log"
+      ],
+      "notes": "SwiftData transactions persisted Level 11 and 726 coins across termination, with idempotent reward and unlock claims."
+    },
+    {
+      "id": "save_failure_recovery",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log"
+      ],
+      "notes": "Injected save failure retains earned progress in memory and the retry transaction recovers without subtracting currency."
+    },
+    {
+      "id": "corrupt_save_recovery",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log"
+      ],
+      "notes": "An injected corrupt profile recovers to a valid playable safe state."
+    },
+    {
+      "id": "first_run_contextual_tutorial",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/full-success-ui-test.log",
+        "product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png"
+      ],
+      "notes": "The clean journey completes five timer-paused panels followed by action-gated steps with unrelated controls blocked."
+    },
+    {
+      "id": "five_second_clarity",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/runtime/rush-fixture.mp4",
+        "product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png"
+      ],
+      "notes": "Visual inspection identifies order cards, patience, timer, coins, stage order, stations, and the next action on one screen."
+    },
+    {
+      "id": "visual_conveyor_direction",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/04-product-design-selection.md",
+        "product/evidence/runtime/rush-fixture.mp4",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png"
+      ],
+      "notes": "The selected warm tactile kitchen hierarchy is implemented as the navigation surface rather than a generic control grid."
+    },
+    {
+      "id": "stage_feedback_polish",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/runtime/rush-fixture.mp4",
+        "product/evidence/runtime/simulator-run.md",
+        "PizzaRush/Services/FeedbackServices.swift"
+      ],
+      "notes": "The live scene and semantic feedback services cover deterministic stage animation, stereo procedural sound, and configurable haptics."
+    },
+    {
+      "id": "results_and_navigation",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png"
+      ],
+      "notes": "All required metrics and actions are visible, and persistence is completed before Continue."
+    },
+    {
+      "id": "voiceover_voicecontrol",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md",
+        "PizzaRush/Views/GameplayView.swift",
+        "PizzaRush/Views/MenuViews.swift",
+        "PizzaRush/Views/ResultsView.swift"
+      ],
+      "notes": "Stable identifiers, semantic labels and values, ordered controls, and equivalent button actions were inspected across the journey."
+    },
+    {
+      "id": "larger_text_layout",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/accessibility-xxxl-ui-test.log"
+      ],
+      "notes": "Accessibility XXXL switches results to a scrollable single-column layout with Retry and Continue hittable."
+    },
+    {
+      "id": "noncolor_reduce_motion",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/runtime/simulator-run.md",
+        "product/screenshots/en-US/iphone-6.9/02-master-the-oven.png",
+        "PizzaRush/Rendering/PizzaRushScene.swift"
+      ],
+      "notes": "Text and icon/shape cues supplement color, while Reduce Motion removes travel, pulse, scale, and particle-heavy effects."
+    },
+    {
+      "id": "contrast_dark_assist",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/06-color-palette-contrast.md",
+        "product/evidence/tests/full-test-suite.log",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png"
+      ],
+      "notes": "Contrast tokens were checked for the fixed light interface and assist mode enlarges targets, widens timing, extends patience, and slows spawning without reward changes."
+    },
+    {
+      "id": "rewarded_callback_persistence",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/monetization-acceptance.md"
+      ],
+      "notes": "Only the verified earned result enters the unique persistent claim transaction; unavailable and dismissal paths grant nothing."
+    },
+    {
+      "id": "interstitial_frequency_policy",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/monetization-acceptance.md"
+      ],
+      "notes": "Focused policy tests cover completion count, first-three-level, time, rewarded-session, and Remove Ads exclusions."
+    },
+    {
+      "id": "remove_ads_storekit",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/monetization-acceptance.md",
+        "PizzaRush/Services/MonetizationServices.swift"
+      ],
+      "notes": "StoreKit 2 uses verified entitlements, transaction updates, revocation refresh, restore, localized display data, and cached relaunch state."
+    },
+    {
+      "id": "consent_debug_release_ids",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/monetization-acceptance.md",
+        "PizzaRush/Services/MonetizationServices.swift"
+      ],
+      "notes": "UMP gates initialization, ATT and personalization are disabled, Debug demo IDs are exact, and Release has no borrowed fallback."
+    },
+    {
+      "id": "ad_unavailable_recovery",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md",
+        "product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png"
+      ],
+      "notes": "The exact disabled fallback appears while every navigation and progression action remains available."
+    },
+    {
+      "id": "game_center_unavailable",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md",
+        "PizzaRush/Services/FeedbackServices.swift"
+      ],
+      "notes": "Authentication is nonblocking and all local journeys passed with Game Center surfaces absent."
+    },
+    {
+      "id": "screenshot_release_states",
+      "status": "passed",
+      "evidence": [
+        "product/evidence/tests/final-release-build-run.log",
+        "product/evidence/runtime/screenshot-manifest.json",
+        "product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png",
+        "product/screenshots/en-US/iphone-6.9/02-master-the-oven.png",
+        "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png",
+        "product/screenshots/en-US/iphone-6.9/04-upgrade-your-kitchen.png",
+        "product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png"
+      ],
+      "notes": "Five current 1320x2868 captures were generated from the final Release build and inspected visually."
+    }
+  ],
+  "overallStatus": "passed",
+  "blockers": []
+}

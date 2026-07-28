@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 3,
+  "idea": {
+    "summary": "A native portrait iPhone arcade cooking game where players move pizzas through a visible capacity-limited preparation, oven, cutting, and dispatch conveyor.",
+    "problem": "Mobile cooking games often hide throughput decisions behind disconnected mini-games or idle automation instead of giving players one readable production line to master in short sessions.",
+    "audience": "General-audience casual arcade and time-management players seeking 30–90 second one-thumb cooking sessions, local progression, and recoverable pressure.",
+    "primaryJourney": "On first launch, complete the contextual tutorial, select an unlocked level, read its objective and allowed recipes, manage preparation, oven, cutting, and dispatch slots, finish the shift, receive deterministic stars and coins, optionally claim a verified double-coin reward, purchase a throughput upgrade, continue to the next unlocked level, and relaunch with progress intact.",
+    "measurableOutcome": "A new player completes a full World 1 level without developer controls, receives correct score, stars, coins, and unlocks, and observes the same progress after termination and relaunch.",
+    "exclusions": [
+      "No real-time 3D, multiplayer, accounts, cloud save, user-generated content, online backend, runtime AI-generated recipes, multiple currencies, subscription, battle pass, complex daily quests, or seasonal event engine in version 1.",
+      "No banners over gameplay, mandatory ads, personalized advertising, cross-app tracking, ATT prompt, or monetization during tutorial.",
+      "No RevenueCat, consumable coin purchases, starter pack, camera, microphone, contacts, photos, health, fitness, location, or custom server storage.",
+      "No second restaurant world in version 1; locked coming-soon locations appear only when additional content is genuinely planned."
+    ]
+  },
+  "pipeline": [
+    {
+      "id": "name_selection",
+      "status": "approved",
+      "evidence": ["product/evidence/01-name-selection.md"]
+    },
+    {
+      "id": "market_analysis",
+      "status": "approved",
+      "evidence": ["product/evidence/02-market-analysis.md"]
+    },
+    {
+      "id": "pricing_decision",
+      "status": "approved",
+      "evidence": ["product/evidence/03-pricing-decision.md"]
+    },
+    {
+      "id": "product_design",
+      "status": "approved",
+      "evidence": ["product/evidence/04-product-design-selection.md"]
+    },
+    {
+      "id": "app_icon",
+      "status": "approved",
+      "evidence": ["product/evidence/05-app-icon-selection.md"]
+    },
+    {
+      "id": "color_palette",
+      "status": "approved",
+      "evidence": ["product/evidence/06-color-palette-contrast.md"]
+    },
+    {
+      "id": "product_acceptance",
+      "status": "approved",
+      "evidence": ["product/acceptance.json"]
+    },
+    {
+      "id": "idea_evaluation",
+      "status": "approved",
+      "evidence": ["product/evidence/07-idea-evaluation.md"]
+    },
+    {
+      "id": "build_authorization",
+      "status": "approved",
+      "evidence": ["product/evidence/08-build-authorization.md"]
+    }
+  ],
+  "nameSelection": {
+    "selectedName": "Pizza Rush",
+    "candidates": [
+      "Pizza Rush",
+      "Ovenline Rush",
+      "Slice Shift",
+      "Brick Oven Dash"
+    ],
+    "rationale": "Pizza Rush is the owner-approved fixed identity and is concise, pronounceable, VoiceOver-clear, and aligned with the product fantasy. Current research found exact-near App Store and Android collisions, so the name remains a high release risk and the alternatives are evidence only.",
+    "availabilityCheckedAt": "2026-07-28T03:22:15Z",
+    "evidence": ["product/evidence/01-name-selection.md"]
+  },
+  "marketAnalysis": {
+    "targetSegment": "General-audience iPhone players who enjoy casual cooking, arcade, and time-management games with 30–90 second one-thumb sessions and local progression.",
+    "demandSignals": [
+      "Good Pizza, Great Pizza has more than 300,000 US ratings, a 4.7 rating, free entry, in-app purchases, and Editors' Choice recognition.",
+      "Cooking Fever and Cooking Craze remain maintained free restaurant games with large level and upgrade systems.",
+      "Direct Pizza Rush substitutes remain active, while user reviews specifically criticize back-to-back ads and support the bounded ad policy."
+    ],
+    "competitors": [
+      "Good Pizza, Great Pizza — https://apps.apple.com/us/app/good-pizza-great-pizza/id911121200",
+      "Cooking Fever: Restaurant Game — https://apps.apple.com/us/app/cooking-fever-restaurant-game/id714796093",
+      "Cooking Craze: Restaurant Game — https://apps.apple.com/us/app/cooking-craze-restaurant-game/id1029094059",
+      "Pizza Rush - Idle Game — https://apps.apple.com/us/app/pizza-rush-idle-game/id6639609772",
+      "Pizza Rush! — https://apps.apple.com/us/app/pizza-rush/id1591016899"
+    ],
+    "differentiation": "A deterministic, capacity-limited physical conveyor makes spatial throughput the central mechanic; every pizza visibly moves through preparation, oven, cutting, and dispatch with accessible non-color timing feedback and strict ad limits.",
+    "distribution": "Use App Store search around pizza, cooking, restaurant, arcade, casual, time management, baking, and kitchen; lead screenshots with conveyor readability, perfect timing, overlapping rush work, upgrades, and results; use GitHub Pages for marketing, support, privacy, and terms.",
+    "risks": [
+      "Pizza Rush has direct App Store name collisions and public research is not legal clearance.",
+      "Strong incumbents create high expectations for content volume, art consistency, and balancing.",
+      "Twenty levels, six recipes, upgrades, Game Center, advertising, StoreKit, accessibility, and release compliance create a substantial version-one scope.",
+      "Advertising SDK privacy behavior and consent state must be reconciled with the compiled Release binary and App Store declarations.",
+      "Oldest-device performance, human accessibility review, and hosted binary state cannot be proved by static source or local compilation."
+    ],
+    "researchedAt": "2026-07-28T03:22:15Z",
+    "evidence": ["product/evidence/02-market-analysis.md"]
+  },
+  "pricing": {
+    "model": "freemium",
+    "pricePoints": [
+      {
+        "amount": 4.99,
+        "currency": "USD",
+        "label": "Remove Ads — non-consumable"
+      }
+    ],
+    "valueMetric": "Completed level sessions and durable World 1 progression with voluntary rewards and no progression wall.",
+    "rationale": "Free entry matches successful category leaders; optional verified Double Coins, tightly capped interstitials, and a $4.99 Remove Ads non-consumable align with the technical plan while avoiding subscription pressure.",
+    "validation": "Good Pizza, Great Pizza validates free entry and optional purchases. Pizza Rush - Idle Game lists a $4.99 No Ads purchase, while its reviews criticizing repeated ads support the three-level and 180-second cap.",
+    "evidence": ["product/evidence/03-pricing-decision.md"]
+  },
+  "productDesign": {
+    "plugin": "product-design",
+    "workflows": ["get-context", "ideate"],
+    "briefFile": "product/design/brief.md",
+    "visualOptions": [
+      "product/design/option-1-warm-kitchen-conveyor.png",
+      "product/design/option-2-countertop-sprint.png",
+      "product/design/option-3-four-stage-storybook.png"
+    ],
+    "selectedOption": "product/design/option-1-warm-kitchen-conveyor.png",
+    "selectionRationale": "Warm Kitchen Conveyor scored 25/25 and most clearly communicates all four stations, physical order, station capacity, bake window, recipe, and thumb-reachable ingredients while remaining feasible as layered SpriteKit artwork with a SwiftUI HUD.",
+    "evidence": [
+      "product/design/brief.md",
+      "product/evidence/04-product-design-selection.md"
+    ]
+  },
+  "appIcon": {
+    "generator": "imagegen",
+    "artDirectionFile": "product/icon/art-direction.md",
+    "options": [
+      "product/icon/option-1-oven-slide.png",
+      "product/icon/option-2-perfect-burst.png"
+    ],
+    "selectedMaster": "product/icon/option-1-oven-slide.png",
+    "selectionRationale": "Oven Slide scored 25/25; its diagonal pizza, oven arch, cheese strand, and restrained speed streak create the strongest small-size one-pizza, one-action silhouette.",
+    "evidence": [
+      "product/icon/art-direction.md",
+      "product/evidence/05-app-icon-selection.md"
+    ]
+  },
+  "colorPalette": {
+    "tokensFile": "product/color-tokens.json",
+    "contrastEvidence": "product/evidence/06-color-palette-contrast.md",
+    "requiredRoles": ["background", "text", "accent", "status"],
+    "evidence": [
+      "product/color-tokens.json",
+      "product/evidence/06-color-palette-contrast.md"
+    ]
+  },
+  "evaluation": {
+    "criteria": {
+      "problem_severity": {
+        "score": 3,
+        "rationale": "The problem is entertainment rather than high-stakes, but the short-session pressure and mastery loop are immediate.",
+        "evidence": ["product/evidence/07-idea-evaluation.md"]
+      },
+      "audience_clarity": {
+        "score": 4,
+        "rationale": "Casual cooking and time-management players are a specific audience with established substitutes.",
+        "evidence": ["product/evidence/02-market-analysis.md"]
+      },
+      "market_demand": {
+        "score": 4,
+        "rationale": "Large maintained incumbents and multiple direct substitutes demonstrate durable category demand.",
+        "evidence": ["product/evidence/02-market-analysis.md"]
+      },
+      "differentiation": {
+        "score": 4,
+        "rationale": "The visible capacity-limited conveyor creates spatial throughput choices that idle and disconnected mini-game loops do not.",
+        "evidence": [
+          "product/design/brief.md",
+          "product/evidence/04-product-design-selection.md"
+        ]
+      },
+      "monetization_fit": {
+        "score": 4,
+        "rationale": "Free entry, optional rewards, bounded natural-transition interstitials, and ad removal fit the genre without subscription pressure.",
+        "evidence": ["product/evidence/03-pricing-decision.md"]
+      },
+      "distribution_fit": {
+        "score": 3,
+        "rationale": "The game is visually legible in screenshots and searchable by genre terms, but exact-name collisions weaken identity and ASO.",
+        "evidence": [
+          "product/evidence/01-name-selection.md",
+          "product/evidence/02-market-analysis.md"
+        ]
+      },
+      "delivery_feasibility": {
+        "score": 3,
+        "rationale": "Native SwiftUI and deterministic SpriteKit are appropriate, while twenty levels plus monetization and release compliance remain a substantial first release.",
+        "evidence": [
+          "product/source/principal-development-plan.md",
+          "product/acceptance.json"
+        ]
+      },
+      "design_coherence": {
+        "score": 5,
+        "rationale": "The conveyor, warm palette, oven-slide icon, gestures, stage animations, semantic audio, and progression all reinforce one pizzeria-rush fantasy.",
+        "evidence": [
+          "product/evidence/04-product-design-selection.md",
+          "product/evidence/05-app-icon-selection.md",
+          "product/evidence/06-color-palette-contrast.md"
+        ]
+      }
+    },
+    "overallScore": 3.75,
+    "decision": "go",
+    "rationale": "Every criterion is at least 3 and the arithmetic mean is 3.75. Proceed with the fixed scope while retaining the name collision, production privacy, runtime, and hosted-release risks as explicit gates.",
+    "evidence": [
+      "product/evidence/07-idea-evaluation.md",
+      "product/development-profile.json",
+      "product/acceptance.json"
+    ]
+  },
+  "buildAuthorization": {
+    "approved": true,
+    "owner": "Chirag Kular",
+    "approvedAt": "2026-07-28T03:22:15Z",
+    "evidence": ["product/evidence/08-build-authorization.md"],
+    "authorizationBasis": "standing_owner_directive",
+    "implementationRequested": true,
+    "directiveDate": "2026-07-26",
+    "selections": {
+      "name": "Pizza Rush",
+      "pricingModel": "freemium",
+      "productDesign": "product/design/option-1-warm-kitchen-conveyor.png",
+      "appIcon": "product/icon/option-1-oven-slide.png",
+      "colorPalette": "product/color-tokens.json",
+      "productAcceptance": "product/acceptance.json"
+    }
+  },
+  "developmentProfile": {
+    "file": "product/development-profile.json",
+    "onDeviceVision": "not_applicable",
+    "evidence": [
+      "product/development-profile.json",
+      "product/source/principal-development-plan.md"
+    ]
+  },
+  "productAcceptance": {
+    "file": "product/acceptance.json",
+    "coreValue": "A player can assemble, bake, slice, and dispatch pizzas through a visible capacity-limited kitchen conveyor before customers leave.",
+    "primaryJourney": "On first launch, complete the contextual tutorial, select an unlocked level, read its objective and allowed recipes, manage preparation, oven, cutting, and dispatch slots, finish the shift, receive deterministic stars and coins, optionally claim a verified double-coin reward, purchase a throughput upgrade, continue to the next unlocked level, and relaunch with progress intact.",
+    "requiredCriteria": [
+      "core_pipeline_complete",
+      "pizza_state_machine",
+      "six_recipes_exact",
+      "bake_phase_boundaries",
+      "scoring_invariants",
+      "combo_reset_rules",
+      "objectives_stars_unlocks",
+      "world_one_twenty_levels",
+      "upgrade_throughput_economy",
+      "fixed_step_determinism",
+      "pause_lifecycle_deadline",
+      "runtime_full_journey",
+      "runtime_performance",
+      "release_configuration_clean",
+      "content_validation",
+      "persistence_atomic_progress",
+      "save_failure_recovery",
+      "corrupt_save_recovery",
+      "first_run_contextual_tutorial",
+      "five_second_clarity",
+      "visual_conveyor_direction",
+      "stage_feedback_polish",
+      "results_and_navigation",
+      "voiceover_voicecontrol",
+      "larger_text_layout",
+      "noncolor_reduce_motion",
+      "contrast_dark_assist",
+      "rewarded_callback_persistence",
+      "interstitial_frequency_policy",
+      "remove_ads_storekit",
+      "consent_debug_release_ids",
+      "ad_unavailable_recovery",
+      "game_center_unavailable",
+      "screenshot_release_states"
+    ],
+    "evidence": [
+      "product/acceptance.json",
+      "product/source/principal-development-plan.md"
+    ]
+  }
+}

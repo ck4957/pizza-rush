@@ -1,0 +1,113 @@
+{
+  "bundle_id": "COM.chiragkular.pizza-rush",
+  "platforms": [
+    "iphone"
+  ],
+  "development_locale": "en-US",
+  "binary_locales": [
+    "en"
+  ],
+  "app_store_locales": [
+    "en-US"
+  ],
+  "test_regions": [
+    "US"
+  ],
+  "voiceover": {
+    "evaluate": true,
+    "common_journeys": [
+      "launch_and_main_menu",
+      "first_run_tutorial",
+      "level_selection_and_objective",
+      "prepare_bake_slice_and_dispatch",
+      "pause_settings_and_tutorial_skip",
+      "results_reward_fallback_and_continue",
+      "kitchen_upgrades",
+      "about_support_privacy_and_terms",
+      "reset_progress"
+    ]
+  },
+  "accessibility_features": {
+    "supportsVoiceover": {
+      "evaluate": true,
+      "status": "needs_confirmation",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "product/evidence/runtime/simulator-run.md",
+        "docs/release/accessibility-localization/README.md"
+      ],
+      "reason": "Stable labels, values, actions, identifiers, and an accessibility-tree journey are present, but a human VoiceOver user review of the production-signed build is still required before declaring this App Store feature."
+    },
+    "supportsVoiceControl": {
+      "evaluate": true,
+      "status": "needs_confirmation",
+      "evidence": [
+        "product/evidence/tests/full-test-suite.log",
+        "docs/release/accessibility-localization/README.md"
+      ],
+      "reason": "Every gameplay gesture has a named button equivalent, but a human Voice Control spoken-command review of the production-signed build is still required before declaring this App Store feature."
+    },
+    "supportsLargerText": {
+      "evaluate": true,
+      "status": "approved",
+      "evidence": [
+        "product/evidence/runtime/accessibility-xxxl-ui-test.log",
+        "product/evidence/tests/full-test-suite.log",
+        "docs/release/accessibility-localization/README.md"
+      ]
+    },
+    "supportsSufficientContrast": {
+      "evaluate": true,
+      "status": "approved",
+      "evidence": [
+        "product/evidence/06-color-palette-contrast.md",
+        "product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png",
+        "product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png"
+      ]
+    },
+    "supportsDarkInterface": {
+      "evaluate": false,
+      "status": "not_applicable",
+      "reason": "Version 1 intentionally ships a fixed warm-light art direction and does not claim Dark Interface support."
+    },
+    "supportsDifferentiateWithoutColorAlone": {
+      "evaluate": true,
+      "status": "approved",
+      "evidence": [
+        "product/screenshots/en-US/iphone-6.9/02-master-the-oven.png",
+        "product/evidence/runtime/simulator-run.md",
+        "docs/release/accessibility-localization/README.md"
+      ]
+    },
+    "supportsReducedMotion": {
+      "evaluate": true,
+      "status": "approved",
+      "evidence": [
+        "product/evidence/runtime/simulator-run.md",
+        "PizzaRush/Rendering/PizzaRushScene.swift",
+        "PizzaRush/Views/RootView.swift",
+        "docs/release/accessibility-localization/README.md"
+      ]
+    },
+    "supportsCaptions": {
+      "evaluate": false,
+      "status": "not_applicable",
+      "reason": "Version 1 contains no video, dialogue, narration, or audio-only informational content."
+    },
+    "supportsAudioDescriptions": {
+      "evaluate": false,
+      "status": "not_applicable",
+      "reason": "Version 1 contains no video content or visual-media track requiring audio description."
+    }
+  },
+  "accessibility_declaration": {},
+  "declaration_readiness": {
+    "iphone": "needs_confirmation",
+    "reason": "Do not write App Store accessibility declarations until human VoiceOver and Voice Control review passes on the exact production-signed hosted build."
+  },
+  "localization_readiness": {
+    "binary": "verified_en_only",
+    "app_store_metadata": "planned_en_US",
+    "reason": "The approved version-one locale set is English only. No translated binary or metadata locale is claimed."
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "app": {
+    "name": "Pizza Rush",
+    "appStoreName": "Pizza Rush",
+    "bundleId": "COM.chiragkular.pizza-rush",
+    "sku": "PIZZARUSH-IOS",
+    "platform": "iOS",
+    "project": "PizzaRush.xcodeproj/project.pbxproj",
+    "scheme": "PizzaRush",
+    "sdk": "iphoneos",
+    "destination": "generic/platform=iOS",
+    "bundleIdResourceId": "7MFAHM59SK"
+  },
+  "release": {
+    "marketingVersion": "1.0",
+    "buildNumber": 1,
+    "releaseAfterApproval": "manual",
+    "uploadPolicy": {
+      "provider": "xcode-cloud",
+      "localUploadAllowed": false
+    }
+  },
+  "preBuild": {
+    "config": "product/pre-build.json"
+  },
+  "metadata": {
+    "files": [
+      "docs/APP_STORE_METADATA.md",
+      "docs/APP_PRIVACY_MATRIX.md",
+      "docs/RELEASE_CHECKLIST.md",
+      "docs/REVIEW_NOTES.md",
+      "docs/PRIVACY_FACTS.md",
+      "docs/release/accessibility-localization/README.md",
+      "docs/screenshots/manifest.json",
+      "product/evidence/runtime/screenshot-manifest.json"
+    ]
+  },
+  "accessibilityLocalization": {
+    "mode": "skip",
+    "config": "Config/release-accessibility-localization.json",
+    "evidenceRoot": "docs/release/accessibility-localization",
+    "reason": "Automated accessibility evidence exists, but human VoiceOver and Voice Control review of the production-signed hosted build remains NEEDS_CONFIRMATION. The optional shared declaration gate is skipped so a local manifest check cannot be mistaken for certification."
+  },
+  "subscriptionCompliance": {
+    "autoRenewable": false
+  },
+  "screenshots": [
+    {
+      "directory": "product/screenshots/en-US/iphone-6.9",
+      "displayType": "APP_IPHONE_67",
+      "width": 1320,
+      "height": 2868,
+      "minCount": 5
+    }
+  ],
+  "requiredScripts": [],
+  "requiredSecrets": []
+}

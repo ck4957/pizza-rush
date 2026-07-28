@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "product": {
+    "name": "Pizza Rush",
+    "coreValue": "A player can assemble, bake, slice, and dispatch pizzas through a visible capacity-limited kitchen conveyor before customers leave.",
+    "primaryJourney": "On first launch, complete the contextual tutorial, select an unlocked level, read its objective and allowed recipes, manage preparation, oven, cutting, and dispatch slots, finish the shift, receive deterministic stars and coins, optionally claim a verified double-coin reward, purchase a throughput upgrade, continue to the next unlocked level, and relaunch with progress intact.",
+    "successDefinition": "A new player completes a full level without developer controls, understands every production stage, receives correct scoring and progression, and observes the same saved result after termination and relaunch."
+  },
+  "coreLoop": {
+    "entryConditions": [
+      "The app launches on iOS 17 or later with bundled content validated and a recoverable local profile.",
+      "At least level 1 is unlocked with one prep slot, one oven slot, one cutting slot, one dispatch slot, and the tutorial active.",
+      "No account, network connection, ad availability, purchase state, Game Center state, or tracking permission is required to begin play."
+    ],
+    "steps": [
+      "Launch to the studio treatment and main menu, then choose Play.",
+      "Select an unlocked level and review its objective, allowed recipes, best score, and new mechanic.",
+      "Receive an icon-based customer order and observe continuously decreasing patience.",
+      "Create dough in the preparation slot, then add sauce, cheese, and exactly the requested toppings using generous tap targets.",
+      "Move the assembled pizza from preparation to an available oven slot; an invalid or full-station drop snaps back without corrupting state.",
+      "Observe undercooked, good, perfect, overcooked, and burned bake phases using icon and shape cues in addition to color.",
+      "Remove the pizza during a deliverable bake phase and move it to the cutting station.",
+      "Slice and box the pizza, then dispatch it to the matching customer.",
+      "Receive the exact base, quality, patience, combo, and perfect-bake reward; continue until the shift timer ends.",
+      "Review stars, revenue, perfect pizzas, best combo, coins earned, record state, Retry, Continue, Upgrade, and optional Double Coins.",
+      "Persist the completed result before leaving results; optionally earn Double Coins only after the verified rewarded callback.",
+      "Purchase an affordable throughput upgrade or continue to the next level, then terminate and relaunch to verify durable progress."
+    ],
+    "successCondition": "The player reaches or exceeds the level objective, earns one to three deterministic stars, unlocks the next level after at least one star, and retains all earned progress through relaunch.",
+    "expectedFeedback": [
+      "Dough bounce and flour puff; spiral sauce; seeded cheese and topping placement; oven door, glow, progress, ready pulse, smoke, and alarm states.",
+      "Ingredient, oven, slice, box, delivery, coin, combo, success, and failure audio routed through semantic providers.",
+      "Light, medium, success, warning, and error haptics that respect the haptic setting.",
+      "Non-color dot, checkmark, star, exclamation, and smoke cues for bake state.",
+      "Box close, restaurant stamp, delivery travel, coin arc, combo expansion, and saved result confirmation."
+    ],
+    "failureConditions": [
+      "An invalid state transition is accepted, including raw dispatch, boxed-to-oven, burned delivery, or toppings added after baking.",
+      "A station over capacity accepts another pizza or an invalid drop loses or duplicates the pizza.",
+      "Scoring, stars, combo, currency, upgrade effects, or unlocks differ from the configured rules.",
+      "Backgrounding, pausing, relaunching, an unavailable ad, a dismissed ad, or a failed save corrupts or blocks progression.",
+      "A reward is granted on ad load, presentation, dismissal, timeout, or failure rather than the verified reward callback.",
+      "The tutorial exposes monetization, allows unrelated touches, or advances without the required action.",
+      "A required control or gameplay state is unavailable to VoiceOver, communicated only by color or sound, clipped at large text, or motion-heavy under Reduce Motion.",
+      "Debug controls, test labels, demo placement names, raw configuration, or placeholder art appear in Release."
+    ],
+    "completionInvariant": "A level result is finalized exactly once after the shift ends; its score, stars, coins, unlocks, records, tutorial steps, and upgrade changes are saved before navigation, and any later ad reward is idempotent and can at most double that level's eligible base coin award once."
+  },
+  "requirements": [
+    {
+      "id": "core_pipeline_complete",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "The playable conveyor preserves the exact order Preparation → Oven → Cutting → Dispatch with configured capacity, generous drag snapping, nearest-target resolution, and invalid-drop return behavior.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "pizza_state_machine",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "The central state machine accepts only dough → preparing → assembled → baking → undercooked/perfectlyCooked/overcooked/burned → slicing → boxed → delivered, with burned pizzas requiring discard and no post-bake ingredients.",
+      "plannedEvidence": ["unit_test", "integration_test"]
+    },
+    {
+      "id": "six_recipes_exact",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Bundled data defines dough, sauce, cheese, pepperoni, mushroom, and olive plus Cheese, Pepperoni, Mushroom, Olive, Pepperoni Mushroom, and Supreme recipes with the exact ingredient sets and difficulties in the principal plan.",
+      "plannedEvidence": ["unit_test", "code_inspection"]
+    },
+    {
+      "id": "bake_phase_boundaries",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Configurable bake evaluation preserves 0–65% undercooked, 65–85% good, 85–100% perfect, 100–125% overcooked, and 125%+ burned boundaries, including exact edge tests.",
+      "plannedEvidence": ["unit_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "scoring_invariants",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Final reward equals base recipe value × quality multiplier × patience multiplier × combo multiplier + perfect bonus, using 1.25/1.00/0.70/0.60 quality, 1.20/1.00/0.60 patience, and capped 1.0/1.2/1.4/1.6 combo bands exactly as specified.",
+      "plannedEvidence": ["unit_test", "integration_test"]
+    },
+    {
+      "id": "combo_reset_rules",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Combo increments only for a correct delivery above 30% patience without a burn or discard between successes, and resets for expired, wrong, burned, or discarded work.",
+      "plannedEvidence": ["unit_test", "integration_test"]
+    },
+    {
+      "id": "objectives_stars_unlocks",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Revenue, customer-count, and combo objectives work; one, two, and three stars use configured thresholds; one star always unlocks the next level exactly once.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test"]
+    },
+    {
+      "id": "world_one_twenty_levels",
+      "category": "core_loop",
+      "priority": "blocker",
+      "requirement": "Version 1 ships one Corner Pizzeria world with 15 main levels plus 5 challenge levels, six functional recipes, four station types, three objective types, and progressive difficulty that does not increase every axis simultaneously.",
+      "plannedEvidence": ["integration_test", "code_inspection", "simulator_run"]
+    },
+    {
+      "id": "upgrade_throughput_economy",
+      "category": "core_loop",
+      "priority": "required",
+      "requirement": "A single UpgradeResolver applies oven, prep, cutting, delivery, and ingredient throughput effects; tier costs are 250, 700, 1800, 4500, and 10000 coins; costs never decrease and no currency duplication or World 1 progression wall exists.",
+      "plannedEvidence": ["unit_test", "integration_test", "simulator_run"]
+    },
+    {
+      "id": "fixed_step_determinism",
+      "category": "runtime",
+      "priority": "blocker",
+      "requirement": "Gameplay uses a 1/60-second fixed simulation step and injectable clock so identical commands and seeds produce identical orders, ingredient placement, timers, scores, and results.",
+      "plannedEvidence": ["unit_test", "integration_test", "log"]
+    },
+    {
+      "id": "pause_lifecycle_deadline",
+      "category": "runtime",
+      "priority": "blocker",
+      "requirement": "Pause, background, foreground, and resume freeze instructional and paused time, reconcile active deadlines without decrement drift, pause SpriteKit/audio, and never duplicate events.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "simulator_run", "log"]
+    },
+    {
+      "id": "runtime_full_journey",
+      "category": "runtime",
+      "priority": "blocker",
+      "requirement": "A clean simulator run completes onboarding, a full successful level, a recoverable failure, results, reward fallback, upgrade, replay, reset, and relaunch without developer controls or gameplay-blocking crash.",
+      "plannedEvidence": ["ui_test", "simulator_run", "screen_recording", "log"]
+    },
+    {
+      "id": "runtime_performance",
+      "category": "runtime",
+      "priority": "required",
+      "requirement": "Release gameplay targets 60 FPS, approximately 250 MB or less, main-menu launch under two seconds on a recent simulator, scene readiness within one second after warm-up, no synchronous gameplay disk access, and no dropped input during completion effects.",
+      "plannedEvidence": ["simulator_run", "log", "code_inspection"]
+    },
+    {
+      "id": "release_configuration_clean",
+      "category": "runtime",
+      "priority": "blocker",
+      "requirement": "Release builds contain no debug menus, test fixtures, demo-ad labels, test-device configuration, raw JSON, placeholder bytes, or inaccessible screenshot-only state; configured production identifiers are injected without secret material.",
+      "plannedEvidence": ["code_inspection", "integration_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "content_validation",
+      "category": "error_recovery",
+      "priority": "required",
+      "requirement": "Debug and CI validation rejects duplicate IDs, missing recipe references or assets, nonpositive targets, nonsequential upgrades, decreasing prices, empty level recipes, and recipes without topping combinations; production falls back to safe bundled content.",
+      "plannedEvidence": ["unit_test", "integration_test", "log"]
+    },
+    {
+      "id": "persistence_atomic_progress",
+      "category": "persistence",
+      "priority": "blocker",
+      "requirement": "Coins, highest unlocked level, level records, upgrades, settings, tutorial steps, ad reward claims, and remove-ads entitlement cache persist after defined transactions and survive termination without per-frame writes; daily rewards are outside the approved version-one cut line.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "simulator_run"]
+    },
+    {
+      "id": "save_failure_recovery",
+      "category": "error_recovery",
+      "priority": "required",
+      "requirement": "A save failure retains earned changes in memory, retries after level completion and next safe opportunity, never subtracts earned currency, and reports a nontechnical recoverable state.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test"]
+    },
+    {
+      "id": "corrupt_save_recovery",
+      "category": "error_recovery",
+      "priority": "required",
+      "requirement": "Corrupted or incompatible local data recovers to a safe profile while preserving the app's ability to play and exposes a clear reset path without raw error details.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run"]
+    },
+    {
+      "id": "first_run_contextual_tutorial",
+      "category": "first_run",
+      "priority": "blocker",
+      "requirement": "Levels 1–3 teach the exact ordered actions and mechanics, pause timers while overlays are visible, spotlight only valid targets, ignore unrelated touches, store each step independently, permit Skip Tutorial in pause settings, and show no monetization.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "five_second_clarity",
+      "category": "first_run",
+      "priority": "blocker",
+      "requirement": "Within five seconds a new player can identify the order, prep, oven, cutting, dispatch, timer, coins, and next valid action from the running screen without external explanation.",
+      "plannedEvidence": ["simulator_run", "screenshot", "screen_recording"]
+    },
+    {
+      "id": "visual_conveyor_direction",
+      "category": "visual_design",
+      "priority": "required",
+      "requirement": "The implemented gameplay screen follows the selected Warm Kitchen Conveyor hierarchy, semantic palette, tactile isometric material language, large silhouettes, and kitchen-as-navigation direction without a generic button grid.",
+      "plannedEvidence": ["screenshot", "simulator_run", "code_inspection"]
+    },
+    {
+      "id": "stage_feedback_polish",
+      "category": "visual_design",
+      "priority": "required",
+      "requirement": "Dough, sauce, cheese, ingredients, oven, slicing, boxing, delivery, coins, and combo provide the specified deterministic animation beats, semantic audio, and haptics while respecting settings.",
+      "plannedEvidence": ["unit_test", "simulator_run", "screen_recording"]
+    },
+    {
+      "id": "results_and_navigation",
+      "category": "visual_design",
+      "priority": "blocker",
+      "requirement": "Results visibly include stars, revenue, perfect pizzas, best combo, coins, record state, Retry, Continue, Double Coins, and Upgrade, with the save completed before navigation.",
+      "plannedEvidence": ["ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "voiceover_voicecontrol",
+      "category": "accessibility",
+      "priority": "blocker",
+      "requirement": "All menus, HUD controls, order values, station states, pizza state, ingredients, settings, upgrade actions, results, and equivalent gameplay actions expose stable labels, values, identifiers, focus order, and Voice Control names.",
+      "plannedEvidence": ["ui_test", "simulator_run", "screenshot", "code_inspection"]
+    },
+    {
+      "id": "larger_text_layout",
+      "category": "accessibility",
+      "priority": "blocker",
+      "requirement": "SwiftUI screens remain readable and operable at 200% or greater Dynamic Type without clipped labels, obscured primary actions, or overlapping controls.",
+      "plannedEvidence": ["ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "noncolor_reduce_motion",
+      "category": "accessibility",
+      "priority": "blocker",
+      "requirement": "Bake and patience state never depend only on color or sound; Reduce Motion replaces bounce, travel, pulse, scale, and particle-heavy effects with stable fades while preserving feedback.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "contrast_dark_assist",
+      "category": "accessibility",
+      "priority": "required",
+      "requirement": "The fixed warm-light art direction and increased-contrast states preserve readable ratios; assist mode enlarges targets, extends patience, widens the perfect window, and slows spawns without disabling progression or reducing rewards. Dark Interface is not claimed for version 1.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "rewarded_callback_persistence",
+      "category": "monetization",
+      "priority": "blocker",
+      "requirement": "Double Coins is offered once per completed level and granted only after the verified Google reward callback; load, present, dismiss, timeout, and failure grant nothing; a verified claim persists idempotently through relaunch.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "simulator_run", "log"]
+    },
+    {
+      "id": "interstitial_frequency_policy",
+      "category": "monetization",
+      "priority": "blocker",
+      "requirement": "Interstitials are eligible only after every three completed non-tutorial levels and at least 180 seconds, never during gameplay, after a rewarded ad, in the first three levels, or immediately after launch; Remove Ads disables them.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "log"]
+    },
+    {
+      "id": "remove_ads_storekit",
+      "category": "monetization",
+      "priority": "blocker",
+      "requirement": "The non-consumable Remove Ads product uses StoreKit 2 localized display data, unlocks only after verified entitlement, restores, survives relaunch and revocation refresh, disables interstitials, and leaves rewarded ads optional.",
+      "plannedEvidence": ["unit_test", "integration_test", "ui_test", "simulator_run"]
+    },
+    {
+      "id": "consent_debug_release_ids",
+      "category": "monetization",
+      "priority": "blocker",
+      "requirement": "Google Mobile Ads initialization and requests are gated by UMP consent; personalized advertising and ATT are disabled; Debug uses official demo units; Release fails closed unless Pizza Rush production app and unit IDs are injected and never imports another app's identifiers. AdMob record read-back remains a distinct release gate.",
+      "plannedEvidence": ["unit_test", "integration_test", "code_inspection"]
+    },
+    {
+      "id": "ad_unavailable_recovery",
+      "category": "error_recovery",
+      "priority": "blocker",
+      "requirement": "Unavailable or failed ads disable the action or show exactly “Reward unavailable.”, exit loading promptly, grant no reward, and never block Continue, Retry, upgrades, or progression.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run", "screenshot"]
+    },
+    {
+      "id": "game_center_unavailable",
+      "category": "error_recovery",
+      "priority": "required",
+      "requirement": "Game Center authenticates non-blockingly and hides or disables leaderboard and achievement surfaces when unavailable while all local gameplay continues.",
+      "plannedEvidence": ["unit_test", "ui_test", "simulator_run"]
+    },
+    {
+      "id": "screenshot_release_states",
+      "category": "runtime",
+      "priority": "required",
+      "requirement": "Deterministic Release fixtures generate current real-app screenshots for Build Your Pizza, Master the Oven, Beat the Lunch Rush, Upgrade Your Kitchen, and Become the Fastest Pizzeria without debug labels.",
+      "plannedEvidence": ["ui_test", "simulator_run", "screenshot"]
+    }
+  ],
+  "antiPatterns": [
+    "Do not implement real-time 3D, multiplayer, accounts, cloud save, user-generated content, multiple currencies, subscriptions, battle passes, complex daily quests, seasonal events, dialogue, an online backend, or runtime AI recipes.",
+    "Do not let SpriteKit own progression, purchases, economy persistence, navigation, ad rewards, or authoritative timers.",
+    "Do not use global mutable game state, direct SDK calls from scene nodes, NotificationCenter as the primary architecture, or persistence queries in the render loop.",
+    "Do not show banners over gameplay, production ads during testing, monetization during tutorial, interstitials after every level, or mandatory ad viewing.",
+    "Do not copy bundle IDs, product IDs, AdMob IDs, RevenueCat identifiers, credentials, pricing, assets, or release claims from reference projects.",
+    "Do not describe compilation, a menu screenshot, an animation, a loaded ad, a local archive, an uploaded build, or an attached build as product acceptance or submission proof."
+  ],
+  "runtimePlan": {
+    "fullJourney": true,
+    "simulator": "required",
+    "physicalDevice": "not_applicable",
+    "persistenceRelaunch": true,
+    "screenshotScenarios": [
+      "Build Your Pizza — selected dough with sauce, cheese, and requested toppings at preparation.",
+      "Master the Oven — active pizza inside the star-marked perfect bake window with non-color cue.",
+      "Beat the Lunch Rush — overlapping preparation, baking, cutting, and dispatch work with multiple orders.",
+      "Upgrade Your Kitchen — affordable throughput upgrade with exact before and after effect.",
+      "Become the Fastest Pizzeria — three-star result with revenue, perfect pizzas, combo, coins, and Continue."
+    ]
+  }
+}

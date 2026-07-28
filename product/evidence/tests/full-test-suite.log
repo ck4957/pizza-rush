@@ -1,0 +1,1035 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj -scheme PizzaRush -configuration Debug -skipMacroValidation -destination "platform=iOS Simulator,id=5D1D82F0-BD1C-45EC-8753-0913DB4383F9" -collect-test-diagnostics never COMPILER_INDEX_STORE_ENABLE=NO ONLY_ACTIVE_ARCH=YES -packageCachePath /Users/ai-dev/Library/Caches/org.swift.swiftpm -derivedDataPath /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData -testProductsPath /Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/test-products/test_sim_2026-07-28T04-22-28-552Z_pid14438_1273c3a3.xctestproducts build-for-testing
+
+Build settings from command line:
+    COMPILER_INDEX_STORE_ENABLE = NO
+    ONLY_ACTIVE_ARCH = YES
+
+2026-07-28 00:22:29.081 xcodebuild[34313:2084578] Writing test products to /Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/test-products/test_sim_2026-07-28T04-22-28-552Z_pid14438_1273c3a3.xctestproducts
+Resolve Package Graph
+
+
+Resolved source packages:
+  GoogleUserMessagingPlatform: https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git @ 3.1.0
+  GoogleMobileAds: https://github.com/googleads/swift-package-manager-google-mobile-ads.git @ 13.7.0
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (7 targets)
+    Target 'PizzaRushTests' in project 'PizzaRush'
+        ➜ Explicit dependency on target 'PizzaRush' in project 'PizzaRush'
+    Target 'PizzaRushUITests' in project 'PizzaRush'
+        ➜ Explicit dependency on target 'PizzaRush' in project 'PizzaRush'
+    Target 'PizzaRush' in project 'PizzaRush'
+        ➜ Explicit dependency on target 'GoogleMobileAds' in project 'GoogleMobileAds'
+    Target 'GoogleMobileAds' in project 'GoogleMobileAds'
+        ➜ Explicit dependency on target 'GoogleMobileAdsTarget' in project 'GoogleMobileAds'
+        ➜ Explicit dependency on target 'GoogleUserMessagingPlatform' in project 'GoogleUserMessagingPlatform'
+    Target 'GoogleMobileAdsTarget' in project 'GoogleMobileAds'
+        ➜ Explicit dependency on target 'GoogleUserMessagingPlatform' in project 'GoogleUserMessagingPlatform'
+    Target 'GoogleUserMessagingPlatform' in project 'GoogleUserMessagingPlatform'
+        ➜ Explicit dependency on target 'UserMessagingPlatformTarget' in project 'GoogleUserMessagingPlatform'
+    Target 'UserMessagingPlatformTarget' in project 'GoogleUserMessagingPlatform' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+Build description signature: 9550ba110bc05753e93646d61733591c
+Build description path: /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/XCBuildData/9550ba110bc05753e93646d61733591c.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/UserMessagingPlatformTarget.modulemap (in target 'UserMessagingPlatformTarget' from project 'GoogleUserMessagingPlatform')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/UserMessagingPlatformTarget.modulemap /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/GoogleMobileAdsTarget.modulemap /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/GoogleMobileAdsTarget.modulemap (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/GoogleMobileAdsTarget.modulemap /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator
+
+SwiftDriver GoogleMobileAdsTarget normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GoogleMobileAdsTarget -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios13.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget_const_extract_protocols.json -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+ScanDependencies /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/placeholder.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'UserMessagingPlatformTarget' from project 'GoogleUserMessagingPlatform')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    
+    Using response file: /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    builtin-ScanDependencies -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.o.scan -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -target arm64-apple-ios12.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -w -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.d --serialize-diagnostics /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.dia -c /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/placeholder.m -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.o
+
+CompileC /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/placeholder.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'UserMessagingPlatformTarget' from project 'GoogleUserMessagingPlatform')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    
+    Using response file: /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -target arm64-apple-ios12.0-simulator -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-implicit-atomic-properties -Wno-objc-interface-ivars -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -w -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.d --serialize-diagnostics /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.dia -c /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/placeholder.m -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/placeholder.o
+
+Ld /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/UserMessagingPlatformTarget.o normal (in target 'UserMessagingPlatformTarget' from project 'GoogleUserMessagingPlatform')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios12.0-simulator -r -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -w -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -filelist /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/UserMessagingPlatformTarget.LinkFileList -nostdlib -Xlinker -object_path_lto -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/UserMessagingPlatformTarget_lto.o -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleUserMessagingPlatform.build/Debug-iphonesimulator/UserMessagingPlatformTarget.build/Objects-normal/arm64/UserMessagingPlatformTarget_dependency_info.dat -fobjc-arc -fobjc-link-runtime -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/UserMessagingPlatformTarget.o
+
+RegisterExecutionPolicyException /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/UserMessagingPlatformTarget.o (in target 'UserMessagingPlatformTarget' from project 'GoogleUserMessagingPlatform')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform
+    builtin-RegisterExecutionPolicyException /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/UserMessagingPlatformTarget.o
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ GoogleMobileAdsTarget (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads/GoogleMobileAdsTarget/placeholder.swift (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    
+
+SwiftCompile normal arm64 Compiling\ placeholder.swift /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads/GoogleMobileAdsTarget/placeholder.swift (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads/GoogleMobileAdsTarget/placeholder.swift (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling placeholder.swift (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for GoogleMobileAdsTarget (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+
+SwiftDriver\ Compilation GoogleMobileAdsTarget normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GoogleMobileAdsTarget -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios13.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget_const_extract_protocols.json -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftDriver\ Compilation\ Requirements GoogleMobileAdsTarget normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GoogleMobileAdsTarget -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.SwiftFileList -DSWIFT_PACKAGE -DDEBUG -DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -DXcode -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios13.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -suppress-warnings -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget_const_extract_protocols.json -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/DerivedSources -Xcc -DSWIFT_PACKAGE -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush.xcodeproj -experimental-emit-module-separately -disable-cmo
+
+SwiftMergeGeneratedHeaders /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/GoogleMobileAdsTarget-Swift.h /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-Swift.h (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads
+    builtin-swiftHeaderTool -arch arm64 /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-Swift.h -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/GoogleMobileAdsTarget-Swift.h
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/GoogleMobileAdsTarget.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.abi.json (in target 'GoogleMobileAdsTarget' from project 'GoogleMobileAds')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-mobile-ads
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/GoogleMobileAdsTarget.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+SwiftDriver PizzaRush normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRush -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64 -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+ProcessInfoPlistFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Info.plist /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Resources/Info.plist (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-infoPlistUtility /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/assetcatalog_generated_info.plist -scanforprivacyfile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Frameworks/GoogleMobileAds.framework -scanforprivacyfile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Frameworks/UserMessagingPlatform.framework -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Info.plist
+
+SwiftCompile normal arm64 Compiling\ FeedbackServices.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/FeedbackServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/FeedbackServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ PizzaRushApp.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/App/PizzaRushApp.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/App/PizzaRushApp.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ GameDomain.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Domain/GameDomain.swift (in target 'PizzaRush' from project 'PizzaRush')
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Domain/GameDomain.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ AppModel.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/App/AppModel.swift (in target 'PizzaRush' from project 'PizzaRush')
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/App/AppModel.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ ResultsView.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/ResultsView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/ResultsView.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ MenuViews.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/MenuViews.swift (in target 'PizzaRush' from project 'PizzaRush')
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/MenuViews.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ GameEngine.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Domain/GameEngine.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Domain/GameEngine.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PizzaRush (in target 'PizzaRush' from project 'PizzaRush')
+
+EmitSwiftModule normal arm64 (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ MonetizationServices.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/MonetizationServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/MonetizationServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ RootView.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/RootView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/RootView.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ PersistenceService.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/PersistenceService.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Services/PersistenceService.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ GameplayView.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/GameplayView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Views/GameplayView.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ PizzaRushScene.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Rendering/PizzaRushScene.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRush/Rendering/PizzaRushScene.swift (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PizzaRushApp.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GameEngine.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ResultsView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling FeedbackServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PersistenceService.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RootView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MonetizationServices.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PizzaRushScene.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GameDomain.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PizzaRush (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriver\ Compilation\ Requirements PizzaRush normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRush -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64 -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.abi.json (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftsourceinfo (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftsourceinfo /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver PizzaRushTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRushTests -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppModel.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ PizzaRushTests (in target 'PizzaRushTests' from project 'PizzaRush')
+
+EmitSwiftModule normal arm64 (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ GameEngineTests.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/GameEngineTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/GameEngineTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ PersistenceAndMonetizationTests.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/PersistenceAndMonetizationTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/PersistenceAndMonetizationTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftCompile normal arm64 Compiling\ ScoringAndContentTests.swift /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/ScoringAndContentTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftCompile normal arm64 /Users/ai-dev/Documents/Dev/pizza-rush/PizzaRushTests/ScoringAndContentTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling GameplayView.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MenuViews.swift (in target 'PizzaRush' from project 'PizzaRush')
+
+SwiftDriver\ Compilation PizzaRush normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRush -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64 -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib normal (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -filelist /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.LinkFileList -install_name @rpath/PizzaRush.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.swiftmodule @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush-linker-args.resp -Wl,-no_warn_duplicate_libraries -Wl,-no_warn_duplicate_libraries -framework WebKit -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -framework GoogleMobileAds -framework UserMessagingPlatform -Xlinker -no_adhoc_codesign -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib -Xlinker -add_ast_path -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget.swiftmodule @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GoogleMobileAds.build/Debug-iphonesimulator/GoogleMobileAdsTarget.build/Objects-normal/arm64/GoogleMobileAdsTarget-linker-args.resp
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for PizzaRushTests (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftDriver\ Compilation\ Requirements PizzaRushTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRushTests -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftsourceinfo (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftsourceinfo /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.abi.json (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.abi.json /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+SwiftDriverJobDiscovery normal arm64 Compiling ScoringAndContentTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling PersistenceAndMonetizationTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GameEngineTests.swift (in target 'PizzaRushTests' from project 'PizzaRush')
+
+SwiftDriver\ Compilation PizzaRushTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name PizzaRushTests -Onone @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.SwiftFileList -DDEBUG -Xcc -fmodule-map-file\=/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/GeneratedModuleMaps-iphonesimulator/UserMessagingPlatformTarget.modulemap -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 6 -I /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -c -j16 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448f6cfe768891a92b912361537c460fe42b.sdkstatcache -output-file-map /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-generated-files.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-own-target-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush-a052a1d61e1a8ff32e2d605ddbec5a45-VFS-iphonesimulator/all-product-headers.yaml -Xcc -iquote -Xcc /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests-project-headers.hmap -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/SourcePackages/checkouts/swift-package-manager-google-user-messaging-platform/UserMessagingPlatformTarget/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources/arm64 -Xcc -I/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-Swift.h -working-directory /Users/ai-dev/Documents/Dev/pizza-rush -experimental-emit-module-separately -disable-cmo
+
+ConstructStubExecutorLinkFileList /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-ExecutorLinkFileList-normal-arm64.txt (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    construct-stub-executor-link-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'PizzaRush' from project 'PizzaRush')
+
+GenerateDSYMFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app.dSYM /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app.dSYM
+
+Ld /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush normal (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush-ExecutorLinkFileList-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush.app-Simulated.xcent -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __ents_der -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush.app-Simulated.xcent.der /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush
+
+GenerateDSYMFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app.dSYM /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil -q /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app.dSYM
+
+CopySwiftLibs /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Frameworks --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/SystemExtensions --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.eNy9NA/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+ExtractAppIntentsMetadata (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.eNy9NA/Metal.xctoolchain --module-name PizzaRush --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier COM.chiragkular.pizza-rush --output /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app --target-triple arm64-apple-ios17.0-simulator --binary-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush --dependency-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush_dependency_info.dat --stringsdata-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.SwiftFileList --metadata-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush.DependencyMetadataFileList --static-metadata-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush.DependencyStaticMetadataFileList --swift-const-vals-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/Objects-normal/arm64/PizzaRush.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-07-28 00:22:33.270 appintentsmetadataprocessor[34382:2085057] Starting appintentsmetadataprocessor export
+2026-07-28 00:22:33.272 appintentsmetadataprocessor[34382:2085057] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+ProcessInfoPlistFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/Info.plist /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/empty-PizzaRushTests.plist (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-infoPlistUtility /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/empty-PizzaRushTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/Info.plist
+
+Ld /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests normal (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -F/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -filelist /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PackageFrameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -bundle_loader /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush -Xlinker -object_path_lto -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.swiftmodule @/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests-linker-args.resp -Wl,-no_warn_duplicate_libraries -Wl,-no_warn_duplicate_libraries -framework WebKit -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests
+
+ExtractAppIntentsMetadata (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.eNy9NA/Metal.xctoolchain --module-name PizzaRushTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier COM.chiragkular.pizza-rushTests --output /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest --target-triple arm64-apple-ios17.0-simulator --binary-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests --dependency-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests_dependency_info.dat --stringsdata-file /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.SwiftFileList --metadata-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests.DependencyMetadataFileList --static-metadata-file-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/PizzaRushTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/Objects-normal/arm64/PizzaRushTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-07-28 00:22:33.505 appintentsmetadataprocessor[34385:2085084] Starting appintentsmetadataprocessor export
+2026-07-28 00:22:33.506 appintentsmetadataprocessor[34385:2085084] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/Frameworks --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PlugIns --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/SystemExtensions --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.eNy9NA/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+GenerateDSYMFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest.dSYM /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest/PizzaRushTests -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest.dSYM
+
+CodeSign /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest (in target 'PizzaRushTests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PlugIns/PizzaRushTests.xctest
+
+CodeSign /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/PizzaRush.debug.dylib
+
+CodeSign /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/__preview.dylib (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/__preview.dylib
+/Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app/__preview.dylib: replacing existing signature
+
+CodeSign /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --entitlements /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRush.build/PizzaRush.app.xcent --timestamp\=none --generate-entitlement-der /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app
+
+Validate /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app (in target 'PizzaRush' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-validationUtility /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRush.app -shallow-bundle -infoplist-subpath Info.plist
+
+ProcessInfoPlistFile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/Info.plist /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushUITests.build/empty-PizzaRushUITests.plist (in target 'PizzaRushUITests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-infoPlistUtility /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushUITests.build/empty-PizzaRushUITests.plist -producttype com.apple.product-type.bundle.ui-testing -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushUITests.build/ProductTypeInfoPlistAdditions.plist -o /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/Info.plist
+
+CopySwiftLibs /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest (in target 'PizzaRushUITests' from project 'PizzaRush')
+    cd /Users/ai-dev/Documents/Dev/pizza-rush
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/PizzaRushUITests --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/Frameworks --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/PlugIns --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/SystemExtensions --scan-folder /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.eNy9NA/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Products/Debug-iphonesimulator/PizzaRushUITests-Runner.app/PlugIns/PizzaRushUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/ai-dev/Documents/Dev/pizza-rush/build/DerivedData/Build/Intermediates.noindex/PizzaRush.build/Debug-iphonesimulator/PizzaRushUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+** TEST BUILD SUCCEEDED **
+
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -testProductsPath /Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/test-products/test_sim_2026-07-28T04-22-28-552Z_pid14438_1273c3a3.xctestproducts -destination "platform=iOS Simulator,id=5D1D82F0-BD1C-45EC-8753-0913DB4383F9" -collect-test-diagnostics never -resultBundlePath /Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/result-bundles/test_sim_2026-07-28T04-22-28-552Z_pid14438_c7b02d9b.xcresult test-without-building
+
+2026-07-28 00:22:34.477 xcodebuild[34392:2085131] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/result-bundles/test_sim_2026-07-28T04-22-28-552Z_pid14438_c7b02d9b.xcresult
+
+2026-07-28 00:22:34.483 xcodebuild[34392:2085131] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-07-28 00:22:34.613 xcodebuild[34392:2085131] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-07-28 00:22:36.484019-0400 PizzaRush[34399:2085727] [plugin] AddInstanceForFactory: No factory registered for id <CFUUID 0x1062fd5c0> F8BB1C28-BAE8-11D6-9C31-00039315CD46
+2026-07-28 00:22:36.700597-0400 PizzaRush[34399:2085538] [Invalid Configuration] No image named 'kitchen-background' found in asset catalog for /Users/ai-dev/Library/Developer/CoreSimulator/Devices/5D1D82F0-BD1C-45EC-8753-0913DB4383F9/data/Containers/Bundle/Application/9164797B-BB34-4F69-9392-D904D053B120/PizzaRush.app
+2026-07-28 00:22:36.734556-0400 PizzaRush[34399:2085538] [Invalid Configuration] No image named 'kitchen-background' found in asset catalog for /Users/ai-dev/Library/Developer/CoreSimulator/Devices/5D1D82F0-BD1C-45EC-8753-0913DB4383F9/data/Containers/Bundle/Application/9164797B-BB34-4F69-9392-D904D053B120/PizzaRush.app
+2026-07-28 00:22:36.753421-0400 PizzaRush[34399:2085769] [Client] Updating selectors failed with: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:36.753490-0400 PizzaRush[34399:2085776] [Client] Synchronous remote object proxy returned error: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:36.754107-0400 PizzaRush[34399:2085769] [Client] Updating selectors failed with: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:36.754191-0400 PizzaRush[34399:2085776] [Client] Synchronous remote object proxy returned error: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:36.754894-0400 PizzaRush[34399:2085769] [Client] Updating selectors failed with: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:36.754990-0400 PizzaRush[34399:2085769] [Client] Updating selectors after delegate addition failed with: Error Domain=NSCocoaErrorDomain Code=4099 "The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process." UserInfo={NSDebugDescription=The connection to service named com.apple.commcenter.coretelephony.xpc was invalidated: Connection init failed at lookup with error 3 - No such process.}
+2026-07-28 00:22:37.209619-0400 PizzaRush[34399:2085538] [Error] _authenticateUsingAlert:Failed to authenticate player with existing credentials.Error: Error Domain=GKErrorDomain Code=6 "The requested operation could not be completed because local player has not been authenticated." UserInfo={NSLocalizedDescription=The requested operation could not be completed because local player has not been authenticated.}
+2026-07-28 00:22:37.214649-0400 PizzaRush[34399:2085538] [Invalid Configuration] No image named 'kitchen-background' found in asset catalog for /Users/ai-dev/Library/Developer/CoreSimulator/Devices/5D1D82F0-BD1C-45EC-8753-0913DB4383F9/data/Containers/Bundle/Application/9164797B-BB34-4F69-9392-D904D053B120/PizzaRush.app
+Test Suite 'All tests' started at 2026-07-28 00:22:37.223.
+Test Suite 'PizzaRushTests.xctest' started at 2026-07-28 00:22:37.223.
+Test Suite 'GameEngineTests' started at 2026-07-28 00:22:37.223.
+Test Case '-[PizzaRushTests.GameEngineTests testAssistModeWidensPerfectWindowAndSlowsPressure]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testAssistModeWidensPerfectWindowAndSlowsPressure]' passed (0.002 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testBakeBoundariesAreExact]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testBakeBoundariesAreExact]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testBurnedPizzaCannotAdvanceAndDiscardRestoresOrder]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testBurnedPizzaCannotAdvanceAndDiscardRestoresOrder]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testCompleteCheeseOrderFollowsProductionOrderAndScores]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testCompleteCheeseOrderFollowsProductionOrderAndScores]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testCompletionCreatesUniqueDurableRewardClaim]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testCompletionCreatesUniqueDurableRewardClaim]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testIdenticalCommandsProduceIdenticalSnapshots]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testIdenticalCommandsProduceIdenticalSnapshots]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testPauseStopsWallClockSimulationUntilResume]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testPauseStopsWallClockSimulationUntilResume]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.GameEngineTests testWrongIngredientCanBeRemovedBeforeBaking]' started.
+Test Case '-[PizzaRushTests.GameEngineTests testWrongIngredientCanBeRemovedBeforeBaking]' passed (0.001 seconds).
+Test Suite 'GameEngineTests' passed at 2026-07-28 00:22:37.232.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.008) seconds
+Test Suite 'PersistenceAndMonetizationTests' started at 2026-07-28 00:22:37.232.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testCompletionUnlocksNextLevelAndRewardClaimIsIdempotent]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testCompletionUnlocksNextLevelAndRewardClaimIsIdempotent]' passed (0.003 seconds).
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testCorruptProfileRecoversToPlayableSafeState]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testCorruptProfileRecoversToPlayableSafeState]' passed (0.005 seconds).
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testDebugConfigurationUsesOnlyOfficialDemoIds]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testDebugConfigurationUsesOnlyOfficialDemoIds]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testInterstitialFrequencyAndTutorialExclusions]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testInterstitialFrequencyAndTutorialExclusions]' passed (0.001 seconds).
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testResetPreservesSettingsAndRemoveAdsEntitlement]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testResetPreservesSettingsAndRemoveAdsEntitlement]' passed (0.003 seconds).
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testSaveFailureRetainsEarnedProgressAndRetryRecovers]' started.
+Test Case '-[PizzaRushTests.PersistenceAndMonetizationTests testSaveFailureRetainsEarnedProgressAndRetryRecovers]' passed (0.002 seconds).
+Test Suite 'PersistenceAndMonetizationTests' passed at 2026-07-28 00:22:37.248.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.014 (0.016) seconds
+Test Suite 'ScoringAndContentTests' started at 2026-07-28 00:22:37.248.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testBundledFallbackCatalogIsCompleteAndValid]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testBundledFallbackCatalogIsCompleteAndValid]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.ScoringAndContentTests testPerfectRewardAddsQualityAndPerfectBonus]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testPerfectRewardAddsQualityAndPerfectBonus]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.ScoringAndContentTests testScoreMultipliersMatchContractBoundaries]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testScoreMultipliersMatchContractBoundaries]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.ScoringAndContentTests testStarThresholdEdgesAreExact]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testStarThresholdEdgesAreExact]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.ScoringAndContentTests testUpgradeCostsAndCapacitiesAreMonotonic]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testUpgradeCostsAndCapacitiesAreMonotonic]' passed (0.000 seconds).
+Test Case '-[PizzaRushTests.ScoringAndContentTests testValidatorRejectsMissingRecipeReference]' started.
+Test Case '-[PizzaRushTests.ScoringAndContentTests testValidatorRejectsMissingRecipeReference]' passed (0.000 seconds).
+Test Suite 'ScoringAndContentTests' passed at 2026-07-28 00:22:37.251.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'PizzaRushTests.xctest' passed at 2026-07-28 00:22:37.251.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 0.023 (0.028) seconds
+Test Suite 'All tests' passed at 2026-07-28 00:22:37.251.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 0.023 (0.029) seconds
+2026-07-28 00:22:37.353243-0400 PizzaRush[34399:2085775] [default] Failed to resolve host network app id to config: bundleID: com.apple.WebKit.Networking instance ID: Optional([_EXExtensionInstanceIdentifier: CA7C8669-15D5-4CEA-8D5A-D63C077A83ED])
+2026-07-28 00:22:37.373571-0400 PizzaRush[34399:2085538] [Account] startAuthenticationForExistingPrimaryPlayer:Failed to Authenticate player.Error: Error Domain=GKErrorDomain Code=2 "The requested operation has been canceled or disabled by the user." UserInfo={NSLocalizedDescription=The requested operation has been canceled or disabled by the user.}
+2026-07-28 00:22:37.404559-0400 PizzaRush[34399:2085538] [Account] authenticationDidCompleteWithError: Authentication failed for player with error: Error Domain=GKErrorDomain Code=2 "The requested operation has been canceled or disabled by the user." UserInfo={NSLocalizedDescription=The requested operation has been canceled or disabled by the user.}
+2026-07-28 00:22:37.404696-0400 PizzaRush[34399:2085538] [Error] reportAuthenticationFailedForPlayer: Authentication failed for player in 0.683256 seconds
+2026-07-28 00:22:38.183040-0400 PizzaRushUITests-Runner[34414:2085840] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'All tests' started at 2026-07-28 00:22:38.718.
+Test Suite 'PizzaRushUITests.xctest' started at 2026-07-28 00:22:38.718.
+Test Suite 'PizzaRushUITests' started at 2026-07-28 00:22:38.718.
+Test Case '-[PizzaRushUITests.PizzaRushUITests testAccessibilityXXXLResultsKeepEveryActionOperable]' started.
+    t =     0.00s Start Test at 2026-07-28 00:22:38.719
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+2026-07-28 00:22:38.803 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:22:38.803 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.29s         Setting up automation session
+objc[34414]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x105cb8310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x105d34398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     1.15s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     2.40s Waiting 5.0s for "Shift Complete!" StaticText to exist
+    t =     3.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =     3.48s         Checking existence of `"Shift Complete!" StaticText`
+    t =     3.53s Checking existence of `"results.continue" Button`
+    t =     3.54s Checking existence of `"results.retry" Button`
+    t =     3.55s Checking existence of `"results.upgrade" Button`
+    t =     3.56s Find the "results.continue" Button
+    t =     3.58s Swipe up Target Application 'COM.chiragkular.pizza-rush'
+    t =     3.58s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.59s     Find the Target Application 'COM.chiragkular.pizza-rush'
+    t =     3.59s     Check for interrupting elements affecting "Pizza Rush" Application
+    t =     3.61s     Synthesize event
+    t =     4.03s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.14s Find the "results.continue" Button
+    t =     6.16s Find the "results.continue" Button
+    t =     6.18s Find the "results.continue" Button
+    t =     6.20s Find the "results.continue" Button
+    t =     6.22s Find the "results.continue" Button
+    t =     6.23s Find the "results.continue" Button
+    t =     6.25s Find the "results.retry" Button
+    t =     6.27s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testAccessibilityXXXLResultsKeepEveryActionOperable]' passed (6.496 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testCleanLaunchNavigatesToFirstLevel]' started.
+    t =     0.00s Start Test at 2026-07-28 00:22:45.216
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+    t =     0.02s         Terminate COM.chiragkular.pizza-rush:34415
+2026-07-28 00:22:46.332 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:22:46.332 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.32s         Setting up automation session
+    t =     2.17s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.45s Waiting 5.0s for "menu.play" Button to exist
+    t =     4.52s     Checking `Expect predicate `existsNoRetry == 1` for object "menu.play" Button`
+    t =     4.52s         Checking existence of `"menu.play" Button`
+    t =     4.55s Tap "menu.play" Button
+    t =     4.55s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.56s     Find the "menu.play" Button
+    t =     4.57s     Check for interrupting elements affecting "menu.play" Button
+    t =     4.58s     Synthesize event
+    t =     4.87s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.87s Waiting 3.0s for "level.1" Button to exist
+    t =     5.95s     Checking `Expect predicate `existsNoRetry == 1` for object "level.1" Button`
+    t =     5.95s         Checking existence of `"level.1" Button`
+    t =     6.00s Tap "level.1" Button
+    t =     6.00s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.00s     Find the "level.1" Button
+    t =     6.03s     Check for interrupting elements affecting "level.1" Button
+    t =     6.06s     Synthesize event
+    t =     6.34s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.34s Waiting 3.0s for "Earn 258 coins" StaticText to exist
+    t =     7.42s     Checking `Expect predicate `existsNoRetry == 1` for object "Earn 258 coins" StaticText`
+    t =     7.42s         Checking existence of `"Earn 258 coins" StaticText`
+    t =     7.44s Checking existence of `"prelevel.start" Button`
+    t =     7.44s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testCleanLaunchNavigatesToFirstLevel]' passed (7.663 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testCompletedResultPersistsAcrossTerminationAndRelaunch]' started.
+    t =     0.00s Start Test at 2026-07-28 00:22:52.881
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+    t =     0.02s         Terminate COM.chiragkular.pizza-rush:34429
+2026-07-28 00:22:54.005 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:22:54.005 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.33s         Setting up automation session
+    t =     2.17s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.44s Waiting 5.0s for "Shift Complete!" StaticText to exist
+    t =     4.51s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =     4.51s         Checking existence of `"Shift Complete!" StaticText`
+    t =     4.54s Terminate COM.chiragkular.pizza-rush:34440
+    t =     5.55s Open COM.chiragkular.pizza-rush
+    t =     5.55s     Launch COM.chiragkular.pizza-rush
+2026-07-28 00:22:58.436 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:22:58.436 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     5.76s         Setting up automation session
+    t =     6.60s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     7.89s Waiting 5.0s for "menu.play" Button to exist
+    t =     8.96s     Checking `Expect predicate `existsNoRetry == 1` for object "menu.play" Button`
+    t =     8.97s         Checking existence of `"menu.play" Button`
+    t =     8.99s Checking existence of `"Level 11" StaticText`
+    t =     9.00s Checking existence of `"726" StaticText`
+    t =     9.01s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testCompletedResultPersistsAcrossTerminationAndRelaunch]' passed (9.230 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testDeterministicResultsFixtureShowsUnavailableRewardFallback]' started.
+    t =     0.00s Start Test at 2026-07-28 00:23:02.113
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+    t =     0.02s         Terminate COM.chiragkular.pizza-rush:34450
+2026-07-28 00:23:03.224 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:23:03.224 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.32s         Setting up automation session
+    t =     2.16s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.38s Waiting 5.0s for "Shift Complete!" StaticText to exist
+    t =     4.46s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =     4.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =     4.50s Checking existence of `"results.continue" Button`
+    t =     4.51s Checking existence of `"results.retry" Button`
+    t =     4.52s Checking existence of `"results.doubleCoins" Button`
+    t =     4.53s Find the "results.doubleCoins" Button
+    t =     4.54s Find the "results.doubleCoins" Button
+    t =     4.55s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testDeterministicResultsFixtureShowsUnavailableRewardFallback]' passed (4.769 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testDeterministicRushFixtureExposesGameplayControls]' started.
+    t =     0.00s Start Test at 2026-07-28 00:23:06.882
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+    t =     0.02s         Terminate COM.chiragkular.pizza-rush:34455
+2026-07-28 00:23:08.003 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:23:08.003 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.33s         Setting up automation session
+    t =     2.17s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.52s Waiting 5.0s for "game.pause" Button to exist
+    t =     4.59s     Checking `Expect predicate `existsNoRetry == 1` for object "game.pause" Button`
+    t =     4.59s         Checking existence of `"game.pause" Button`
+    t =     4.63s Waiting 3.0s for "Pepperoni" StaticText to exist
+    t =     5.71s     Checking `Expect predicate `existsNoRetry == 1` for object "Pepperoni" StaticText`
+    t =     5.71s         Checking existence of `"Pepperoni" StaticText`
+    t =     5.73s Checking existence of `"Mushroom" StaticText`
+    t =     5.75s Checking existence of `"game.startDough" Button`
+    t =     5.77s Waiting 3.0s for StaticText (First Match) to exist
+    t =     6.84s     Checking `Expect predicate `existsNoRetry == 1` for object StaticText (First Match)`
+    t =     6.84s         Checking existence of `StaticText (First Match)`
+    t =     6.85s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testDeterministicRushFixtureExposesGameplayControls]' passed (7.068 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testFullSuccessfulLevelWithoutGameplayFixture]' started.
+    t =     0.00s Start Test at 2026-07-28 00:23:13.950
+    t =     0.02s Set Up
+    t =     0.02s Open COM.chiragkular.pizza-rush
+    t =     0.02s     Launch COM.chiragkular.pizza-rush
+    t =     0.02s         Terminate COM.chiragkular.pizza-rush:34472
+2026-07-28 00:23:15.055 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:23:15.055 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.31s         Setting up automation session
+    t =     2.16s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.40s Waiting 5.0s for "menu.play" Button to exist
+    t =     4.47s     Checking `Expect predicate `existsNoRetry == 1` for object "menu.play" Button`
+    t =     4.47s         Checking existence of `"menu.play" Button`
+    t =     4.50s Tap "menu.play" Button
+    t =     4.50s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.50s     Find the "menu.play" Button
+    t =     4.51s     Check for interrupting elements affecting "menu.play" Button
+    t =     4.53s     Synthesize event
+    t =     4.82s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.82s Tap "level.1" Button
+    t =     4.82s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.82s     Find the "level.1" Button
+    t =     4.87s     Check for interrupting elements affecting "level.1" Button
+    t =     4.89s     Synthesize event
+    t =     5.18s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     5.19s Tap "prelevel.start" Button
+    t =     5.19s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     5.19s     Find the "prelevel.start" Button
+    t =     5.20s     Check for interrupting elements affecting "prelevel.start" Button
+    t =     5.21s     Synthesize event
+    t =     5.50s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     5.50s Waiting 3.0s for "tutorial.next" Button to exist
+    t =     6.55s     Checking `Expect predicate `existsNoRetry == 1` for object "tutorial.next" Button`
+    t =     6.56s         Checking existence of `"tutorial.next" Button`
+    t =     6.58s Tap "tutorial.next" Button
+    t =     6.58s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.58s     Find the "tutorial.next" Button
+    t =     6.59s     Check for interrupting elements affecting "tutorial.next" Button
+    t =     6.61s     Synthesize event
+    t =     6.90s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.91s Waiting 3.0s for "tutorial.next" Button to exist
+    t =     7.96s     Checking `Expect predicate `existsNoRetry == 1` for object "tutorial.next" Button`
+    t =     7.97s         Checking existence of `"tutorial.next" Button`
+    t =     7.99s Tap "tutorial.next" Button
+    t =     7.99s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     7.99s     Find the "tutorial.next" Button
+    t =     8.00s     Check for interrupting elements affecting "tutorial.next" Button
+    t =     8.02s     Synthesize event
+    t =     8.31s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     8.31s Waiting 3.0s for "tutorial.next" Button to exist
+    t =     9.35s     Checking `Expect predicate `existsNoRetry == 1` for object "tutorial.next" Button`
+    t =     9.36s         Checking existence of `"tutorial.next" Button`
+    t =     9.37s Tap "tutorial.next" Button
+    t =     9.37s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     9.37s     Find the "tutorial.next" Button
+    t =     9.39s     Check for interrupting elements affecting "tutorial.next" Button
+    t =     9.40s     Synthesize event
+    t =     9.70s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     9.71s Waiting 3.0s for "tutorial.next" Button to exist
+    t =    10.78s     Checking `Expect predicate `existsNoRetry == 1` for object "tutorial.next" Button`
+    t =    10.78s         Checking existence of `"tutorial.next" Button`
+    t =    10.80s Tap "tutorial.next" Button
+    t =    10.80s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    10.80s     Find the "tutorial.next" Button
+    t =    10.82s     Check for interrupting elements affecting "tutorial.next" Button
+    t =    10.83s     Synthesize event
+    t =    11.12s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    11.13s Waiting 3.0s for "tutorial.next" Button to exist
+    t =    12.19s     Checking `Expect predicate `existsNoRetry == 1` for object "tutorial.next" Button`
+    t =    12.19s         Checking existence of `"tutorial.next" Button`
+    t =    12.20s Tap "tutorial.next" Button
+    t =    12.20s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    12.20s     Find the "tutorial.next" Button
+    t =    12.22s     Check for interrupting elements affecting "tutorial.next" Button
+    t =    12.23s     Synthesize event
+    t =    12.52s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    12.52s Waiting 5.0s for "game.startDough" Button to exist
+    t =    13.60s     Checking `Expect predicate `existsNoRetry == 1` for object "game.startDough" Button`
+    t =    13.61s         Checking existence of `"game.startDough" Button`
+    t =    13.62s Tap "game.startDough" Button
+    t =    13.62s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    13.63s     Find the "game.startDough" Button
+    t =    13.64s     Check for interrupting elements affecting "game.startDough" Button
+    t =    13.65s     Synthesize event
+    t =    13.94s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    13.95s Tap "ingredient.sauce" Button
+    t =    13.95s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    13.95s     Find the "ingredient.sauce" Button
+    t =    13.97s     Check for interrupting elements affecting "ingredient.sauce" Button
+    t =    13.98s     Synthesize event
+    t =    14.28s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    14.28s Tap "ingredient.cheese" Button
+    t =    14.28s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    14.29s     Find the "ingredient.cheese" Button
+    t =    14.31s     Check for interrupting elements affecting "ingredient.cheese" Button
+    t =    14.32s     Synthesize event
+    t =    14.61s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    14.61s Waiting 3.0s for "game.toOven" Button to exist
+    t =    15.69s     Checking `Expect predicate `existsNoRetry == 1` for object "game.toOven" Button`
+    t =    15.69s         Checking existence of `"game.toOven" Button`
+    t =    15.71s Find the "game.toOven" Button
+    t =    15.72s Tap "game.toOven" Button
+    t =    15.72s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    15.73s     Find the "game.toOven" Button
+    t =    15.74s     Check for interrupting elements affecting "game.toOven" Button
+    t =    15.76s     Synthesize event
+    t =    16.05s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    16.05s Waiting 10.0s for "Perfect" StaticText to exist
+    t =    17.13s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    17.13s         Checking existence of `"Perfect" StaticText`
+    t =    17.15s         Capturing element debug description
+    t =    18.11s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    18.11s         Checking existence of `"Perfect" StaticText`
+    t =    18.13s         Capturing element debug description
+    t =    19.09s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    19.09s         Checking existence of `"Perfect" StaticText`
+    t =    19.10s         Capturing element debug description
+    t =    20.08s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    20.08s         Checking existence of `"Perfect" StaticText`
+    t =    20.10s         Capturing element debug description
+    t =    21.06s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    21.06s         Checking existence of `"Perfect" StaticText`
+    t =    21.08s         Capturing element debug description
+    t =    22.06s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    22.06s         Checking existence of `"Perfect" StaticText`
+    t =    22.08s         Capturing element debug description
+    t =    23.15s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    23.15s         Checking existence of `"Perfect" StaticText`
+    t =    23.17s Tap "game.removeOven" Button
+    t =    23.17s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    23.17s     Find the "game.removeOven" Button
+    t =    23.18s     Check for interrupting elements affecting "game.removeOven" Button
+    t =    23.20s     Synthesize event
+    t =    23.49s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    23.49s Waiting 3.0s for "game.slice" Button to exist
+    t =    24.58s     Checking `Expect predicate `existsNoRetry == 1` for object "game.slice" Button`
+    t =    24.58s         Checking existence of `"game.slice" Button`
+    t =    24.60s Tap "game.slice" Button
+    t =    24.60s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    24.60s     Find the "game.slice" Button
+    t =    24.62s     Check for interrupting elements affecting "game.slice" Button
+    t =    24.63s     Synthesize event
+    t =    24.92s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    24.92s Waiting 3.0s for "game.deliver" Button to exist
+    t =    25.98s     Checking `Expect predicate `existsNoRetry == 1` for object "game.deliver" Button`
+    t =    25.98s         Checking existence of `"game.deliver" Button`
+    t =    26.00s Tap "game.deliver" Button
+    t =    26.00s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    26.00s     Find the "game.deliver" Button
+    t =    26.02s     Check for interrupting elements affecting "game.deliver" Button
+    t =    26.03s     Synthesize event
+    t =    26.32s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    26.33s Waiting 5.0s for "game.startDough" Button to exist
+    t =    27.40s     Checking `Expect predicate `existsNoRetry == 1` for object "game.startDough" Button`
+    t =    27.40s         Checking existence of `"game.startDough" Button`
+    t =    27.42s Tap "game.startDough" Button
+    t =    27.42s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    27.42s     Find the "game.startDough" Button
+    t =    27.44s     Check for interrupting elements affecting "game.startDough" Button
+    t =    27.45s     Synthesize event
+    t =    27.75s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    27.75s Tap "ingredient.sauce" Button
+    t =    27.75s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    27.75s     Find the "ingredient.sauce" Button
+    t =    27.77s     Check for interrupting elements affecting "ingredient.sauce" Button
+    t =    27.79s     Synthesize event
+    t =    28.08s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    28.09s Tap "ingredient.cheese" Button
+    t =    28.09s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    28.09s     Find the "ingredient.cheese" Button
+    t =    28.11s     Check for interrupting elements affecting "ingredient.cheese" Button
+    t =    28.12s     Synthesize event
+    t =    28.42s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    28.42s Tap "ingredient.pepperoni" Button
+    t =    28.42s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    28.42s     Find the "ingredient.pepperoni" Button
+    t =    28.44s     Check for interrupting elements affecting "ingredient.pepperoni" Button
+    t =    28.46s     Synthesize event
+    t =    28.75s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    28.75s Waiting 3.0s for "game.toOven" Button to exist
+    t =    29.83s     Checking `Expect predicate `existsNoRetry == 1` for object "game.toOven" Button`
+    t =    29.83s         Checking existence of `"game.toOven" Button`
+    t =    29.85s Find the "game.toOven" Button
+    t =    29.87s Tap "game.toOven" Button
+    t =    29.87s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    29.87s     Find the "game.toOven" Button
+    t =    29.89s     Check for interrupting elements affecting "game.toOven" Button
+    t =    29.91s     Synthesize event
+    t =    30.20s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    30.20s Waiting 10.0s for "Perfect" StaticText to exist
+    t =    31.28s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    31.28s         Checking existence of `"Perfect" StaticText`
+    t =    31.30s         Capturing element debug description
+    t =    32.25s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    32.25s         Checking existence of `"Perfect" StaticText`
+    t =    32.27s         Capturing element debug description
+    t =    33.22s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    33.22s         Checking existence of `"Perfect" StaticText`
+    t =    33.24s         Capturing element debug description
+    t =    34.21s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    34.21s         Checking existence of `"Perfect" StaticText`
+    t =    34.22s         Capturing element debug description
+    t =    35.27s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    35.27s         Checking existence of `"Perfect" StaticText`
+    t =    35.29s         Capturing element debug description
+    t =    36.22s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    36.22s         Checking existence of `"Perfect" StaticText`
+    t =    36.24s         Capturing element debug description
+    t =    37.28s     Checking `Expect predicate `existsNoRetry == 1` for object "Perfect" StaticText`
+    t =    37.28s         Checking existence of `"Perfect" StaticText`
+    t =    37.30s Tap "game.removeOven" Button
+    t =    37.30s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    37.30s     Find the "game.removeOven" Button
+    t =    37.32s     Check for interrupting elements affecting "game.removeOven" Button
+    t =    37.33s     Synthesize event
+    t =    37.62s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    37.63s Waiting 3.0s for "game.slice" Button to exist
+    t =    38.68s     Checking `Expect predicate `existsNoRetry == 1` for object "game.slice" Button`
+    t =    38.68s         Checking existence of `"game.slice" Button`
+    t =    38.70s Tap "game.slice" Button
+    t =    38.70s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    38.70s     Find the "game.slice" Button
+    t =    38.72s     Check for interrupting elements affecting "game.slice" Button
+    t =    38.73s     Synthesize event
+    t =    39.02s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    39.03s Waiting 3.0s for "game.deliver" Button to exist
+    t =    40.08s     Checking `Expect predicate `existsNoRetry == 1` for object "game.deliver" Button`
+    t =    40.08s         Checking existence of `"game.deliver" Button`
+    t =    40.10s Tap "game.deliver" Button
+    t =    40.10s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    40.10s     Find the "game.deliver" Button
+    t =    40.12s     Check for interrupting elements affecting "game.deliver" Button
+    t =    40.13s     Synthesize event
+    t =    40.43s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    40.44s Waiting 55.0s for "Shift Complete!" StaticText to exist
+    t =    41.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    41.48s         Checking existence of `"Shift Complete!" StaticText`
+    t =    41.50s         Capturing element debug description
+    t =    42.46s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    42.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =    42.48s         Capturing element debug description
+    t =    43.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    43.45s         Checking existence of `"Shift Complete!" StaticText`
+    t =    43.46s         Capturing element debug description
+    t =    44.51s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    44.51s         Checking existence of `"Shift Complete!" StaticText`
+    t =    44.52s         Capturing element debug description
+    t =    45.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    45.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =    45.47s         Capturing element debug description
+    t =    46.52s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    46.52s         Checking existence of `"Shift Complete!" StaticText`
+    t =    46.54s         Capturing element debug description
+    t =    47.50s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    47.50s         Checking existence of `"Shift Complete!" StaticText`
+    t =    47.52s         Capturing element debug description
+    t =    48.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    48.49s         Checking existence of `"Shift Complete!" StaticText`
+    t =    48.50s         Capturing element debug description
+    t =    49.46s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    49.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =    49.48s         Capturing element debug description
+    t =    50.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    50.45s         Checking existence of `"Shift Complete!" StaticText`
+    t =    50.46s         Capturing element debug description
+    t =    51.53s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    51.53s         Checking existence of `"Shift Complete!" StaticText`
+    t =    51.55s         Capturing element debug description
+    t =    52.51s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    52.52s         Checking existence of `"Shift Complete!" StaticText`
+    t =    52.53s         Capturing element debug description
+    t =    53.49s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    53.49s         Checking existence of `"Shift Complete!" StaticText`
+    t =    53.51s         Capturing element debug description
+    t =    54.46s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    54.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =    54.48s         Capturing element debug description
+    t =    55.52s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    55.52s         Checking existence of `"Shift Complete!" StaticText`
+    t =    55.54s         Capturing element debug description
+    t =    56.50s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    56.50s         Checking existence of `"Shift Complete!" StaticText`
+    t =    56.52s         Capturing element debug description
+    t =    57.49s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    57.49s         Checking existence of `"Shift Complete!" StaticText`
+    t =    57.50s         Capturing element debug description
+    t =    58.44s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    58.44s         Checking existence of `"Shift Complete!" StaticText`
+    t =    58.45s         Capturing element debug description
+    t =    59.52s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    59.52s         Checking existence of `"Shift Complete!" StaticText`
+    t =    59.54s         Capturing element debug description
+    t =    60.50s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    60.50s         Checking existence of `"Shift Complete!" StaticText`
+    t =    60.52s         Capturing element debug description
+    t =    61.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    61.48s         Checking existence of `"Shift Complete!" StaticText`
+    t =    61.50s         Capturing element debug description
+    t =    62.46s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    62.46s         Checking existence of `"Shift Complete!" StaticText`
+    t =    62.48s         Capturing element debug description
+    t =    63.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    63.45s         Checking existence of `"Shift Complete!" StaticText`
+    t =    63.47s         Capturing element debug description
+    t =    64.44s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    64.44s         Checking existence of `"Shift Complete!" StaticText`
+    t =    64.45s         Capturing element debug description
+    t =    65.50s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    65.50s         Checking existence of `"Shift Complete!" StaticText`
+    t =    65.52s         Capturing element debug description
+    t =    66.47s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    66.47s         Checking existence of `"Shift Complete!" StaticText`
+    t =    66.49s         Capturing element debug description
+    t =    67.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    67.45s         Checking existence of `"Shift Complete!" StaticText`
+    t =    67.47s         Capturing element debug description
+    t =    68.52s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    68.52s         Checking existence of `"Shift Complete!" StaticText`
+    t =    68.54s         Capturing element debug description
+    t =    69.49s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    69.49s         Checking existence of `"Shift Complete!" StaticText`
+    t =    69.51s         Capturing element debug description
+    t =    70.44s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    70.44s         Checking existence of `"Shift Complete!" StaticText`
+    t =    70.45s         Capturing element debug description
+    t =    71.50s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    71.51s         Checking existence of `"Shift Complete!" StaticText`
+    t =    71.52s         Capturing element debug description
+    t =    72.49s     Checking `Expect predicate `existsNoRetry == 1` for object "Shift Complete!" StaticText`
+    t =    72.49s         Checking existence of `"Shift Complete!" StaticText`
+    t =    72.50s Checking existence of `"results.continue" Button`
+    t =    72.51s Tap "results.continue" Button
+    t =    72.51s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    72.51s     Find the "results.continue" Button
+    t =    72.52s     Check for interrupting elements affecting "results.continue" Button
+    t =    72.54s     Synthesize event
+    t =    72.83s     Wait for COM.chiragkular.pizza-rush to idle
+    t =    72.84s Waiting 3.0s for "Level 2" StaticText to exist
+    t =    73.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Level 2" StaticText`
+    t =    73.89s         Checking existence of `"Level 2" StaticText`
+    t =    73.90s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testFullSuccessfulLevelWithoutGameplayFixture]' passed (74.432 seconds).
+Test Case '-[PizzaRushUITests.PizzaRushUITests testSettingsAndSupportAreReachable]' started.
+    t =     0.00s Start Test at 2026-07-28 00:24:28.384
+    t =     0.02s Set Up
+    t =     0.03s Open COM.chiragkular.pizza-rush
+    t =     0.03s     Launch COM.chiragkular.pizza-rush
+    t =     0.03s         Terminate COM.chiragkular.pizza-rush:34480
+2026-07-28 00:24:29.474 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-07-28 00:24:29.474 xcodebuild[34392:2085131] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.30s         Setting up automation session
+    t =     2.13s         Wait for COM.chiragkular.pizza-rush to idle
+    t =     3.42s Waiting 5.0s for "menu.settings" Button to exist
+    t =     4.49s     Checking `Expect predicate `existsNoRetry == 1` for object "menu.settings" Button`
+    t =     4.49s         Checking existence of `"menu.settings" Button`
+    t =     4.52s Tap "menu.settings" Button
+    t =     4.52s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.52s     Find the "menu.settings" Button
+    t =     4.54s     Check for interrupting elements affecting "menu.settings" Button
+    t =     4.55s     Synthesize event
+    t =     4.84s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     4.84s Waiting 3.0s for "Assist Mode" Switch to exist
+    t =     5.90s     Checking `Expect predicate `existsNoRetry == 1` for object "Assist Mode" Switch`
+    t =     5.90s         Checking existence of `"Assist Mode" Switch`
+    t =     5.94s Checking existence of `"settings.aboutSupport" Button`
+    t =     5.96s Tap "settings.aboutSupport" Button
+    t =     5.96s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     5.96s     Find the "settings.aboutSupport" Button
+    t =     5.98s     Check for interrupting elements affecting "settings.aboutSupport" Button
+    t =     6.00s     Synthesize event
+    t =     6.29s     Wait for COM.chiragkular.pizza-rush to idle
+    t =     6.29s Waiting 3.0s for "Pizza Rush" StaticText to exist
+    t =     7.36s     Checking `Expect predicate `existsNoRetry == 1` for object "Pizza Rush" StaticText`
+    t =     7.37s         Checking existence of `"Pizza Rush" StaticText`
+    t =     7.39s Checking existence of `"Privacy Policy" Button`
+    t =     7.41s Checking existence of `"Terms of Use" Button`
+    t =     7.43s Tear Down
+Test Case '-[PizzaRushUITests.PizzaRushUITests testSettingsAndSupportAreReachable]' passed (7.656 seconds).
+Test Suite 'PizzaRushUITests' passed at 2026-07-28 00:24:36.040.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 117.314 (117.322) seconds
+Test Suite 'PizzaRushUITests.xctest' passed at 2026-07-28 00:24:36.041.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 117.314 (117.323) seconds
+Test Suite 'All tests' passed at 2026-07-28 00:24:36.042.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 117.314 (117.325) seconds
+2026-07-28 00:24:36.337 xcodebuild[34392:2085131] [MT] IDETestOperationsObserverDebug: 121.722 elapsed -- Testing started completed.
+2026-07-28 00:24:36.337 xcodebuild[34392:2085131] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-07-28 00:24:36.337 xcodebuild[34392:2085131] [MT] IDETestOperationsObserverDebug: 121.722 sec, +121.722 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/ai-dev/Library/Developer/XcodeBuildMCP/workspaces/pizza-rush-a42695cf1869/result-bundles/test_sim_2026-07-28T04-22-28-552Z_pid14438_c7b02d9b.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

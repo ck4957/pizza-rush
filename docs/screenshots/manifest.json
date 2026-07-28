@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "app": "Pizza Rush",
+  "bundleId": "COM.chiragkular.pizza-rush",
+  "marketingVersion": "1.0",
+  "buildNumber": "1",
+  "configuration": "Release",
+  "captureEnvironment": {
+    "device": "iPhone 17 Pro Max",
+    "runtime": "iOS 26.5",
+    "displayType": "APP_IPHONE_67",
+    "width": 1320,
+    "height": 2868,
+    "locale": "en-US",
+    "capturedAt": "2026-07-28T04:26:00Z"
+  },
+  "requiredSize": {
+    "width": 1320,
+    "height": 2868
+  },
+  "screenshots": [
+    {
+      "position": 1,
+      "title": "Build Your Pizza",
+      "scenario": "build",
+      "file": "../../product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "8f6dba92c1bda60940b07264551abcf830fdfc88d3225e92edbd861c37c23d80"
+    },
+    {
+      "position": 2,
+      "title": "Master the Oven",
+      "scenario": "oven",
+      "file": "../../product/screenshots/en-US/iphone-6.9/02-master-the-oven.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "3f500a668311c16d978e76370065e350147ab86494f37f12e7b4854f8b248a82"
+    },
+    {
+      "position": 3,
+      "title": "Beat the Lunch Rush",
+      "scenario": "rush",
+      "file": "../../product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "f9f5d1015378d79f240aca400fe008d2511dd9fe701dd68f414a8cfb4d13303d"
+    },
+    {
+      "position": 4,
+      "title": "Upgrade Your Kitchen",
+      "scenario": "upgrade",
+      "file": "../../product/screenshots/en-US/iphone-6.9/04-upgrade-your-kitchen.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "cc576d66152423c360cdd66f4c5af574ac740a05d71ba6ff16dd12c528bced7b"
+    },
+    {
+      "position": 5,
+      "title": "Become the Fastest Pizzeria",
+      "scenario": "results",
+      "file": "../../product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png",
+      "width": 1320,
+      "height": 2868,
+      "sha256": "af95cfdd8e7328feb400124a5e1fa7688e1aebea791580961e0cffdf6211821f"
+    }
+  ]
+}

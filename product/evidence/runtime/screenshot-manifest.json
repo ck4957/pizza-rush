@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "configuration": "Release",
+  "device": "iPhone 17 Pro Max",
+  "os": "iOS 26.5",
+  "dimensions": {
+    "width": 1320,
+    "height": 2868
+  },
+  "locale": "en-US",
+  "captures": [
+    {
+      "position": 1,
+      "title": "Build Your Pizza",
+      "file": "product/screenshots/en-US/iphone-6.9/01-build-your-pizza.png",
+      "scenario": "build"
+    },
+    {
+      "position": 2,
+      "title": "Master the Oven",
+      "file": "product/screenshots/en-US/iphone-6.9/02-master-the-oven.png",
+      "scenario": "oven"
+    },
+    {
+      "position": 3,
+      "title": "Beat the Lunch Rush",
+      "file": "product/screenshots/en-US/iphone-6.9/03-beat-the-lunch-rush.png",
+      "scenario": "rush"
+    },
+    {
+      "position": 4,
+      "title": "Upgrade Your Kitchen",
+      "file": "product/screenshots/en-US/iphone-6.9/04-upgrade-your-kitchen.png",
+      "scenario": "upgrade"
+    },
+    {
+      "position": 5,
+      "title": "Become the Fastest Pizzeria",
+      "file": "product/screenshots/en-US/iphone-6.9/05-fastest-pizzeria.png",
+      "scenario": "results"
+    }
+  ]
+}

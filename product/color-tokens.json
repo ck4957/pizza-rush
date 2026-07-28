@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "light": {
+    "background": "#FFF2D9",
+    "surface": "#F6E6B4",
+    "textPrimary": "#332C29",
+    "textSecondary": "#66733D",
+    "accent": "#D94A32",
+    "action": "#66733D",
+    "statusSuccess": "#F1B942",
+    "statusWarning": "#D99B52",
+    "statusDanger": "#D94A32",
+    "stationAccent": "#4D7594"
+  },
+  "dark": {
+    "background": "#211C1A",
+    "surface": "#332C29",
+    "textPrimary": "#FFF2D9",
+    "textSecondary": "#F6E6B4",
+    "accent": "#F07A5F",
+    "action": "#A9B56E",
+    "statusSuccess": "#F1B942",
+    "statusWarning": "#E5AF70",
+    "statusDanger": "#F07A5F",
+    "stationAccent": "#82A9C4"
+  },
+  "nonColorCues": {
+    "undercooked": "dot",
+    "ready": "checkmark",
+    "perfect": "star",
+    "overcooked": "exclamation",
+    "burned": "smoke"
+  }
+}

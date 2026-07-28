@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cheese",
+    "displayName": "Cheese",
+    "requiredIngredients": ["sauce", "cheese"],
+    "preparationDuration": 2,
+    "baseBakeDuration": 8,
+    "baseReward": 80,
+    "difficulty": 1
+  },
+  {
+    "id": "pepperoni",
+    "displayName": "Pepperoni",
+    "requiredIngredients": ["sauce", "cheese", "pepperoni"],
+    "preparationDuration": 2,
+    "baseBakeDuration": 8,
+    "baseReward": 100,
+    "difficulty": 1
+  },
+  {
+    "id": "mushroom",
+    "displayName": "Mushroom",
+    "requiredIngredients": ["sauce", "cheese", "mushroom"],
+    "preparationDuration": 2,
+    "baseBakeDuration": 8,
+    "baseReward": 100,
+    "difficulty": 1
+  },
+  {
+    "id": "olive",
+    "displayName": "Olive",
+    "requiredIngredients": ["sauce", "cheese", "olive"],
+    "preparationDuration": 2,
+    "baseBakeDuration": 8,
+    "baseReward": 100,
+    "difficulty": 1
+  },
+  {
+    "id": "pepperoni_mushroom",
+    "displayName": "Pepperoni Mushroom",
+    "requiredIngredients": ["sauce", "cheese", "pepperoni", "mushroom"],
+    "preparationDuration": 3,
+    "baseBakeDuration": 9,
+    "baseReward": 140,
+    "difficulty": 2
+  },
+  {
+    "id": "supreme",
+    "displayName": "Supreme",
+    "requiredIngredients": ["sauce", "cheese", "pepperoni", "mushroom", "olive"],
+    "preparationDuration": 4,
+    "baseBakeDuration": 10,
+    "baseReward": 180,
+    "difficulty": 3
+  }
+]

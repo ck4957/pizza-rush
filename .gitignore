@@ -1,0 +1,14 @@
+.DS_Store
+build/
+DerivedData/
+*.xcresult
+*.xccovreport
+*.xccovarchive
+*.ipa
+*.dSYM.zip
+xcuserdata/
+*.xcuserstate
+.asc/
+.env
+.env.*
+!*.example

@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "onDeviceVision": "not_applicable",
+  "rationale": "Pizza Rush uses deterministic local SpriteKit gameplay and does not search, classify, generate, or analyze images or video."
+}
