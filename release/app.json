@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "app": {
     "name": "Pizza Rush",
-    "appStoreName": "Pizza Rush",
+    "appStoreName": "Pizza Rush: Cooking Game",
     "bundleId": "COM.chiragkular.pizza-rush",
     "sku": "PIZZARUSH-IOS",
     "platform": "iOS",

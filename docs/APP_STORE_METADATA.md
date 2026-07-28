@@ -2,7 +2,8 @@
 
 ## Identity
 
-- App name: Pizza Rush
+- App Store name: Pizza Rush: Cooking Game
+- On-device name: Pizza Rush
 - Bundle ID: `COM.chiragkular.pizza-rush`
 - SKU: `PIZZARUSH-IOS`
 - Version: 1.0

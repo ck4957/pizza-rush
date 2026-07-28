@@ -28,8 +28,13 @@ Apple rejected the creation request before mutation with:
 
 > The app name you entered is already being used. If you have trademark rights to this name and would like it released for your use, submit a claim.
 
-No alternative name is authorized. Until the owner obtains the name through
-Apple's claim process or explicitly approves a different name, there is no App
-Store Connect app ID against which metadata, In-App Purchase, App Privacy,
-screenshots, Xcode Cloud, hosted build attachment, or App Review submission can
-be created.
+On 2026-07-28 the owner authorized adding descriptive secondary text. The
+selected App Store-only name is `Pizza Rush: Cooking Game`; the on-device name
+remains `Pizza Rush`. A live U.S. App Store catalog search returned no exact
+match, but App Store Connect creation remains the authoritative availability
+check.
+
+The authenticated App Store Connect form accepted the new name without an
+inline collision error and enabled Create. Submitting the form redirected to
+Apple's login page because the Chrome session expired. A subsequent authenticated
+API-key read-back still returned zero app records, so creation did not complete.

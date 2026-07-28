@@ -22,7 +22,7 @@
 - [x] AdMob app and production rewarded/interstitial units created and read back
 - [x] Production AdMob identifiers injected into Release
 - [x] Exact production-identifier commit pushed and read back
-- [ ] App Store Connect app record created with the exact fixed name — blocked: Apple reports the name is already in use; no alternative is authorized
+- [ ] App Store Connect app record created as `Pizza Rush: Cooking Game` — the name cleared inline collision validation, but the authenticated Chrome session expired during creation and Apple API read-back still returns no app record
 - [ ] Version 1.0, categories, price, availability, age rating, rights, encryption, metadata, and App Privacy complete
 - [ ] Remove Ads IAP created, localized, priced at USD 4.99, and supplied with review evidence
 - [ ] Screenshots delivered in App Store Connect with every asset state COMPLETE
