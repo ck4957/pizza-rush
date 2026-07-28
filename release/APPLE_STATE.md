@@ -15,9 +15,7 @@ Read back 2026-07-28 through `asc` 3.0.0 using the validated `hourside-release` 
 
 `asc apps list --bundle-id COM.chiragkular.pizza-rush` returned zero app records.
 
-The canonical `asc web apps create` attempt preserved the exact name and used `--auto-rename=false`, but stopped before mutation because the cached Apple web session had expired and the command required an Apple Account login. The official API-key profile remains valid for supported API operations.
-
-The app record must be created from an authenticated App Store Connect web session with:
+An authenticated App Store Connect web attempt used the owner-fixed values:
 
 - Name: Pizza Rush
 - Bundle ID: `COM.chiragkular.pizza-rush`
@@ -26,4 +24,12 @@ The app record must be created from an authenticated App Store Connect web sessi
 - Platform: iOS
 - Initial version: 1.0
 
-No alternative name is authorized if Apple rejects the exact name.
+Apple rejected the creation request before mutation with:
+
+> The app name you entered is already being used. If you have trademark rights to this name and would like it released for your use, submit a claim.
+
+No alternative name is authorized. Until the owner obtains the name through
+Apple's claim process or explicitly approves a different name, there is no App
+Store Connect app ID against which metadata, In-App Purchase, App Privacy,
+screenshots, Xcode Cloud, hosted build attachment, or App Review submission can
+be created.

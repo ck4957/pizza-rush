@@ -114,6 +114,10 @@ final class GoogleAdService: NSObject, AdServing {
             status = .unavailable
             return
         }
+        let requestConfiguration = MobileAds.shared.requestConfiguration
+        requestConfiguration.maxAdContentRating = .general
+        requestConfiguration.publisherPrivacyPersonalizationState = .disabled
+
         status = .requestingConsent
         do {
             let parameters = RequestParameters()

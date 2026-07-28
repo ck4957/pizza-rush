@@ -19,9 +19,10 @@
 
 - [ ] Public GitHub repository created and exact commit read back
 - [ ] GitHub Pages marketing, support, privacy, terms, contact, and app-ads.txt URLs live
-- [ ] AdMob app and production rewarded/interstitial units created and read back
-- [ ] Production AdMob identifiers injected into Release and exact commit pushed
-- [ ] App Store Connect app record created with the exact fixed name
+- [x] AdMob app and production rewarded/interstitial units created and read back
+- [x] Production AdMob identifiers injected into Release
+- [ ] Exact production-identifier commit pushed and read back
+- [ ] App Store Connect app record created with the exact fixed name — blocked: Apple reports the name is already in use; no alternative is authorized
 - [ ] Version 1.0, categories, price, availability, age rating, rights, encryption, metadata, and App Privacy complete
 - [ ] Remove Ads IAP created, localized, priced at USD 4.99, and supplied with review evidence
 - [ ] Screenshots delivered in App Store Connect with every asset state COMPLETE
