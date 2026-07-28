@@ -19,8 +19,8 @@
 ## Classification
 
 - Primary category: Games
-- Secondary category: Casual
-- Game subcategory: Casual
+- Secondary category: Entertainment
+- Game subcategories: Casual and Simulation
 - Intended audience: General audience, ages 13 and older
 - Made for Kids: No
 - Content rating facts: no violence, profanity, sexual content, horror, mature themes, gambling, contests, alcohol, tobacco, drugs, weapons, medical content, unrestricted web access, or user-generated content
@@ -79,7 +79,7 @@ Description:
 ## Review and legal
 
 - Demo account: Not required
-- Content rights: All app code, text, gameplay data, procedural sound, and generated art are owned for this release; Google-served ad creatives are third-party advertising content
+- Content rights: `USES_THIRD_PARTY_CONTENT`; all app code, text, gameplay data, procedural sound, and generated art are owned for this release, and Google is authorized to serve third-party advertising creative
 - Encryption: Standard HTTPS only; `ITSAppUsesNonExemptEncryption=false`
 - Review contact name: Chirag Kular
 - Review contact email: kular_chirag@yahoo.com (current App Store Connect account-holder read-back)

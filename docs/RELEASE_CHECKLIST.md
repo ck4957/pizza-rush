@@ -6,7 +6,7 @@
 - [x] Product pre-build schema
 - [x] Product acceptance contract
 - [x] 34 of 34 product-acceptance criteria passed
-- [x] 27 of 27 unit, integration, and UI tests passed
+- [x] 28 of 28 unit, integration, and UI tests passed, including the current Remove Ads review-screenshot fixture
 - [x] Debug and Release simulator builds passed
 - [x] Full clean first-run tutorial-to-Level-2 journey passed
 - [x] Save failure, corrupt save, and termination/relaunch persistence passed
@@ -22,10 +22,11 @@
 - [x] AdMob app and production rewarded/interstitial units created and read back
 - [x] Production AdMob identifiers injected into Release
 - [x] Exact production-identifier commit pushed and read back
-- [ ] App Store Connect app record created as `Pizza Rush: Cooking Game` — the name cleared inline collision validation, but the authenticated Chrome session expired during creation and Apple API read-back still returns no app record
-- [ ] Version 1.0, categories, price, availability, age rating, rights, encryption, metadata, and App Privacy complete
-- [ ] Remove Ads IAP created, localized, priced at USD 4.99, and supplied with review evidence
-- [ ] Screenshots delivered in App Store Connect with every asset state COMPLETE
+- [x] App Store Connect app `6795540557` created as `Pizza Rush: Cooking Game` and read back by bundle ID
+- [x] Version 1.0, categories, free price, worldwide availability, age rating, content rights, metadata, and published App Privacy complete
+- [x] Remove Ads IAP `6795541865` created, localized, priced at USD 4.99, available worldwide, and `READY_TO_SUBMIT` with a COMPLETE review screenshot
+- [x] Five 6.7-inch screenshots delivered in App Store Connect with every asset state COMPLETE
+- [ ] Build-specific encryption answer applied to the exact hosted build
 - [ ] Review contact phone confirmed by owner
 - [ ] Human VoiceOver and Voice Control journey reviewed before any accessibility declaration
 - [ ] Xcode Cloud workflow configured against the exact GitHub commit

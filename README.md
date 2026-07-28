@@ -16,7 +16,7 @@ Pizza Rush is a native portrait iPhone arcade cooking game. Players keep a visib
 
 ## Validation
 
-- 27 of 27 unit, integration, and UI tests passed
+- 28 of 28 unit, integration, and UI tests passed
 - Full clean tutorial-to-Level-2 journey passed
 - 34 of 34 product-acceptance criteria passed
 - Debug and Release simulator builds passed

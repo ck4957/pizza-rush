@@ -385,6 +385,8 @@ struct AboutSupportView: View {
                     if model.profile.removeAdsUnlocked {
                         Label("Interstitial ads removed", systemImage: "checkmark.seal.fill")
                             .foregroundStyle(Color.pizzaOlive)
+                    } else if model.isRemoveAdsReviewFixture {
+                        Button("Remove Ads — $4.99") {}
                     } else if let product = model.purchaseService.removeAdsProduct {
                         Button("Remove Ads — \(product.displayPrice)") {
                             Task { await model.purchaseService.purchaseRemoveAds() }

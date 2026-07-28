@@ -32,6 +32,15 @@ No name, email, phone number, address, precise location, contacts, photos, camer
 
 The final App Store selections must be reconciled against the privacy manifests and SDK versions compiled into the exact hosted build. “Data Not Collected” is not an authorized answer.
 
+## App Store Connect publication
+
+Published on 2026-07-28 for App Store Connect app `6795540557`:
+
+- Seven data types: Coarse Location, Device ID, Product Interaction, Advertising Data, Crash Data, Performance Data, and Other Diagnostic Data
+- Every disclosed data type: not linked to the user
+- Every disclosed data type: not used for tracking
+- Purposes match the table above
+
 ## Product and owner data
 
 - Local SwiftData profile: coins, levels, scores, stars, upgrades, settings, tutorial steps, ad-reward claims, and cached Remove Ads state remain on device.

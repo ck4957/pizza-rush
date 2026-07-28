@@ -10,7 +10,11 @@
     "scheme": "PizzaRush",
     "sdk": "iphoneos",
     "destination": "generic/platform=iOS",
-    "bundleIdResourceId": "7MFAHM59SK"
+    "bundleIdResourceId": "7MFAHM59SK",
+    "appStoreConnectAppId": "6795540557",
+    "appInfoId": "40cf4b03-81ea-429a-91eb-1c0049944925",
+    "appStoreVersionId": "50fcf9c4-47a2-4172-b7d0-725fe647e0bf",
+    "inAppPurchaseId": "6795541865"
   },
   "release": {
     "marketingVersion": "1.0",
@@ -31,9 +35,12 @@
       "docs/RELEASE_CHECKLIST.md",
       "docs/REVIEW_NOTES.md",
       "docs/PRIVACY_FACTS.md",
+      "release/metadata/app-info/en-US.json",
+      "release/metadata/version/1.0/en-US.json",
       "docs/release/accessibility-localization/README.md",
       "docs/screenshots/manifest.json",
-      "product/evidence/runtime/screenshot-manifest.json"
+      "product/evidence/runtime/screenshot-manifest.json",
+      "product/screenshots/review/remove-ads-review.png"
     ]
   },
   "accessibilityLocalization": {

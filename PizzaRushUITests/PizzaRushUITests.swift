@@ -61,6 +61,21 @@ final class PizzaRushUITests: XCTestCase {
         XCTAssertTrue(app.buttons["Terms of Use"].exists)
     }
 
+    func testCaptureRemoveAdsReviewScreenshot() {
+        let app = launch(["-ScreenshotScenario", "removeAds"])
+
+        let removeAds = app.buttons.matching(
+            NSPredicate(format: "label BEGINSWITH %@", "Remove Ads")
+        ).firstMatch
+        XCTAssertTrue(removeAds.waitForExistence(timeout: 5))
+        XCTAssertEqual(removeAds.label, "Remove Ads — $4.99")
+
+        let screenshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        screenshot.name = "remove-ads-review"
+        screenshot.lifetime = .keepAlways
+        add(screenshot)
+    }
+
     func testCompletedResultPersistsAcrossTerminationAndRelaunch() {
         let first = XCUIApplication()
         first.launchArguments = [

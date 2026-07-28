@@ -26,7 +26,7 @@ Stable model identifiers, ad identifiers, product identifiers, recipe IDs, acces
 
 ## Automated and runtime evidence
 
-- The complete suite passed 27 of 27 tests on iPhone 17 Pro Max, iOS 26.5.
+- The complete suite passed 28 of 28 tests on iPhone 17 Pro Max, iOS 26.5.
 - A clean, real-timer UI journey completed all first-run instruction panels, made and delivered Cheese and Pepperoni pizzas, completed the level, and continued to Level 2.
 - Accessibility XXXL changed the result metrics to a one-column layout and kept Retry and Continue reachable and hittable.
 - The runtime accessibility tree exposes stable names and identifiers for menu, levels, objectives, tutorial, order values, ingredients, every production action, bake state/value, pause, results, upgrades, and support.

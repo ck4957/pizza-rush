@@ -184,7 +184,9 @@ final class AppModel {
             if !processArguments.contains("-UITestPersistent") {
                 persistence.prepareScreenshotProfile()
             }
-            if scenario == "upgrade" {
+            if scenario == "removeAds" {
+                route = .aboutSupport
+            } else if scenario == "upgrade" {
                 route = .upgrades
             } else if scenario == "results" {
                 startLevel(number: 10, fixture: "results")
@@ -335,6 +337,7 @@ final class AppModel {
     func showUpgrades() { route = .upgrades }
     func showSettings() { route = .settings }
     func showAboutSupport() { route = .aboutSupport }
+    var isRemoveAdsReviewFixture: Bool { screenshotScenario == "removeAds" }
 
     func level(_ number: Int) -> LevelDefinition? {
         catalog.levels.first { $0.number == number }
